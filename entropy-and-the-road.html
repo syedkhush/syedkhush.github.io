@@ -173,16 +173,17 @@
     .bar-row {
       display: flex;
       align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
       gap: 10px;
     }
 
     .bar-label {
       font-family: Arial, sans-serif;
       font-size: 13px;
-      min-width: 120px;
+      min-width: 130px;
       text-align: right;
       color: #333;
+      flex-shrink: 0;
     }
 
     .bar-track {
@@ -191,19 +192,24 @@
       height: 28px;
       position: relative;
       border-radius: 2px;
+      display: flex;
+      align-items: center;
     }
 
     .bar-fill {
       height: 100%;
       border-radius: 2px;
-      display: flex;
-      align-items: center;
-      padding-left: 8px;
+      min-width: 6px;
+      flex-shrink: 0;
+    }
+
+    .bar-value {
       font-family: Arial, sans-serif;
       font-size: 12px;
       font-weight: 700;
-      color: #fff;
-      transition: width 0.3s;
+      color: #333;
+      padding-left: 8px;
+      white-space: nowrap;
     }
 
     .share-box {
@@ -453,45 +459,31 @@
     <div style="font-family:Arial;font-size:13px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.5px;">What you actually control on the road</div>
     <div class="bar-row">
       <div class="bar-label">Your speed</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:80%;background:#2d9b5a;">80% — you control this</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:80%;background:#2d9b5a;"></div><span class="bar-value">80% — you control this</span></div>
     </div>
     <div class="bar-row">
       <div class="bar-label">Your attention</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:75%;background:#2d9b5a;">75% — mostly you</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:75%;background:#2d9b5a;"></div><span class="bar-value">75% — mostly you</span></div>
     </div>
     <div class="bar-row">
       <div class="bar-label">Your vehicle</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:55%;background:#f6a623;">55% — if maintained</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:55%;background:#f6a623;"></div><span class="bar-value">55% — if maintained</span></div>
     </div>
     <div class="bar-row">
       <div class="bar-label">Road condition</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:10%;background:#e53e3e;">10%</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:10%;background:#e53e3e;"></div><span class="bar-value">10%</span></div>
     </div>
     <div class="bar-row">
       <div class="bar-label">Other drivers</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:5%;background:#e53e3e;">5%</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:5%;background:#e53e3e;"></div><span class="bar-value">5%</span></div>
     </div>
     <div class="bar-row">
       <div class="bar-label">Weather</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:3%;background:#e53e3e;">3%</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:3%;background:#e53e3e;"></div><span class="bar-value">3%</span></div>
     </div>
     <div class="bar-row">
       <div class="bar-label">Random events</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:1%;background:#e53e3e;">~0%</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:1%;background:#e53e3e;"></div><span class="bar-value">~0%</span></div>
     </div>
     <p style="font-family:Arial;font-size:12px;color:#888;margin-top:10px;font-style:italic;">Entropy lives in the bottom half of this list. And the bottom half can kill you.</p>
   </div>
@@ -528,33 +520,23 @@
     <div style="font-family:Arial;font-size:13px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.5px;">Key reasons road deaths are rising globally</div>
     <div class="bar-row">
       <div class="bar-label">Phone distraction</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:90%;background:#e53e3e;">Rapidly increasing</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:90%;background:#e53e3e;"></div><span class="bar-value">Rapidly increasing</span></div>
     </div>
     <div class="bar-row">
       <div class="bar-label">More vehicles</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:80%;background:#e53e3e;">Especially in cities</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:80%;background:#e53e3e;"></div><span class="bar-value">Especially in cities</span></div>
     </div>
     <div class="bar-row">
       <div class="bar-label">Poor infrastructure</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:70%;background:#f6a623;">Unchanged in decades</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:70%;background:#f6a623;"></div><span class="bar-value">Unchanged in decades</span></div>
     </div>
     <div class="bar-row">
       <div class="bar-label">Speeding culture</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:60%;background:#f6a623;">Normalized</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:60%;background:#f6a623;"></div><span class="bar-value">Normalized</span></div>
     </div>
     <div class="bar-row">
       <div class="bar-label">Safety enforcement</div>
-      <div class="bar-track">
-        <div class="bar-fill" style="width:20%;background:#2d9b5a;">Improving (slowly)</div>
-      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:20%;background:#2d9b5a;"></div><span class="bar-value">Improving (slowly)</span></div>
     </div>
   </div>
 
