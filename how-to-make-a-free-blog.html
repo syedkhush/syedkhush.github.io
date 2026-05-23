@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Make Your Own Blog for Absolutely Free — SyedKhush</title>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia:ital@0;1&family=Arial:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fff;
+      color: #1a1a1a;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* Header - WBW style simple */
+    header {
+      border-bottom: 3px solid #000;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-name {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      text-decoration: none;
+      color: #000;
+      letter-spacing: -0.5px;
+    }
+
+    nav a {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #333;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    /* Article */
+    article {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .post-meta {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: Arial, sans-serif;
+      font-size: clamp(26px, 5vw, 36px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      color: #000;
+    }
+
+    .subtitle {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 30px 0;
+    }
+
+    p { margin-bottom: 22px; }
+
+    h2 {
+      font-family: Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 40px 0 16px;
+      color: #000;
+    }
+
+    h3 {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin: 30px 0 12px;
+      color: #000;
+    }
+
+    /* WBW style boxes */
+    .wbw-box {
+      border: 2px solid #000;
+      padding: 20px 24px;
+      margin: 30px 0;
+      background: #fffef5;
+    }
+
+    .wbw-box.blue { background: #f0f6ff; border-color: #3a7bd5; }
+    .wbw-box.green { background: #f0fff4; border-color: #2d9b5a; }
+    .wbw-box.red { background: #fff5f5; border-color: #e53e3e; }
+
+    .wbw-box-title {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    /* Stick figure illustration area */
+    .illustration {
+      text-align: center;
+      margin: 30px 0;
+      padding: 10px;
+    }
+
+    .illustration svg {
+      max-width: 100%;
+    }
+
+    .caption {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* Steps */
+    .step {
+      display: flex;
+      gap: 16px;
+      margin: 24px 0;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: #000;
+      line-height: 1;
+      min-width: 36px;
+    }
+
+    .step-content h3 { margin-top: 0; }
+
+    /* Code block */
+    pre {
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      border-left: 4px solid #000;
+      padding: 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      overflow-x: auto;
+      margin: 20px 0;
+      line-height: 1.5;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      background: #f5f5f5;
+      padding: 2px 6px;
+      font-size: 15px;
+      border: 1px solid #ddd;
+    }
+
+    /* WBW style bold callout */
+    .bold-point {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      margin: 40px 0;
+      padding: 0 20px;
+      line-height: 1.4;
+    }
+
+    a { color: #1a5db5; }
+    a:hover { text-decoration: underline; }
+
+    ul, ol {
+      padding-left: 28px;
+      margin-bottom: 22px;
+    }
+
+    li { margin-bottom: 8px; }
+
+    /* Footer */
+    footer {
+      border-top: 3px solid #000;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      font-size: 18px;
+      color: #000;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* Share section */
+    .share-box {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 24px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .share-box p {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .share-btn {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 24px;
+      text-decoration: none;
+      margin: 4px;
+    }
+
+    .share-btn:hover { background: #333; color: #fff; }
+
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      .step { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="site-name">SyedKhush</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<article>
+  <div class="post-meta">May 23, 2026 · by syed sami · 8 min read</div>
+  <h1>How to Make Your Own Blog for Absolutely Free</h1>
+  <p class="subtitle">A no-BS guide to getting your words on the internet without spending a single rupee</p>
+  <hr class="divider">
+
+  <p>So you want to start a blog.</p>
+
+  <p>Maybe you've been thinking about it for months. Maybe you have a thousand ideas bouncing around in your head. Maybe you're just tired of posting your hot takes on Instagram where they disappear after 24 hours like they never existed.</p>
+
+  <p>Whatever the reason — good news. You can have a real, actual blog on the internet today. For free. Without knowing how to code. Without paying for hosting. Without doing anything complicated.</p>
+
+  <p>Here's how.</p>
+
+  <div class="illustration">
+    <svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+      <!-- Stick figure person thinking -->
+      <circle cx="80" cy="40" r="18" fill="none" stroke="#000" stroke-width="2.5"/>
+      <line x1="80" y1="58" x2="80" y2="110" stroke="#000" stroke-width="2.5"/>
+      <line x1="80" y1="75" x2="55" y2="95" stroke="#000" stroke-width="2.5"/>
+      <line x1="80" y1="75" x2="105" y2="95" stroke="#000" stroke-width="2.5"/>
+      <line x1="80" y1="110" x2="60" y2="140" stroke="#000" stroke-width="2.5"/>
+      <line x1="80" y1="110" x2="100" y2="140" stroke="#000" stroke-width="2.5"/>
+      <!-- Thought bubbles -->
+      <circle cx="115" cy="30" r="5" fill="none" stroke="#000" stroke-width="1.5"/>
+      <circle cx="128" cy="20" r="8" fill="none" stroke="#000" stroke-width="1.5"/>
+      <circle cx="148" cy="12" r="12" fill="none" stroke="#000" stroke-width="1.5"/>
+      <!-- Blog screen -->
+      <rect x="180" y="20" width="100" height="70" rx="3" fill="none" stroke="#000" stroke-width="2"/>
+      <line x1="190" y1="35" x2="270" y2="35" stroke="#000" stroke-width="1.5"/>
+      <line x1="190" y1="48" x2="255" y2="48" stroke="#555" stroke-width="1.5"/>
+      <line x1="190" y1="58" x2="265" y2="58" stroke="#555" stroke-width="1.5"/>
+      <line x1="190" y1="68" x2="250" y2="68" stroke="#555" stroke-width="1.5"/>
+      <text x="230" y="110" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">your blog!</text>
+      <!-- Arrow -->
+      <line x1="115" y1="75" x2="175" y2="60" stroke="#000" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <polygon points="175,60 165,55 168,65" fill="#000"/>
+      <text x="80" y="158" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">you</text>
+    </svg>
+    <p class="caption">You → Blog. Simple.</p>
+  </div>
+
+  <h2>First, let's talk about your options</h2>
+
+  <p>There are roughly a million ways to start a blog. Most of them either cost money, require technical skills, or both. But a few of them are genuinely, actually, no-strings-attached free. Here are the best ones:</p>
+
+  <div class="wbw-box blue">
+    <div class="wbw-box-title">🏆 The Best Free Blog Options</div>
+    <ol>
+      <li><strong>GitHub Pages</strong> — Free forever, your own URL, no ads. Requires very basic setup (we'll cover this).</li>
+      <li><strong>Substack</strong> — Super easy, built-in audience, free tier is generous. Great for newsletters too.</li>
+      <li><strong>Beehiiv</strong> — Similar to Substack, very polished, free plan available.</li>
+      <li><strong>Medium</strong> — Write and publish instantly. Free forever. Huge built-in audience.</li>
+      <li><strong>WordPress.com</strong> — The classic. Free subdomain like yourname.wordpress.com.</li>
+    </ol>
+  </div>
+
+  <p>Each of these has trade-offs. Let me break them down honestly.</p>
+
+  <div class="illustration">
+    <svg width="500" height="140" viewBox="0 0 500 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- Comparison bars -->
+      <text x="10" y="20" font-family="Arial" font-size="12" font-weight="bold" fill="#000">Control</text>
+      <rect x="10" y="28" width="200" height="14" rx="2" fill="#eee"/>
+      <rect x="10" y="28" width="190" height="14" rx="2" fill="#1a5db5"/>
+      <text x="205" y="40" font-family="Arial" font-size="11" fill="#555">GitHub Pages</text>
+
+      <rect x="10" y="48" width="200" height="14" rx="2" fill="#eee"/>
+      <rect x="10" y="48" width="80" height="14" rx="2" fill="#2d9b5a"/>
+      <text x="205" y="60" font-family="Arial" font-size="11" fill="#555">Substack</text>
+
+      <rect x="10" y="68" width="200" height="14" rx="2" fill="#eee"/>
+      <rect x="10" y="68" width="40" height="14" rx="2" fill="#e53e3e"/>
+      <text x="205" y="80" font-family="Arial" font-size="11" fill="#555">Medium</text>
+
+      <!-- Ease -->
+      <text x="290" y="20" font-family="Arial" font-size="12" font-weight="bold" fill="#000">Ease of setup</text>
+      <rect x="290" y="28" width="180" height="14" rx="2" fill="#eee"/>
+      <rect x="290" y="28" width="60" height="14" rx="2" fill="#1a5db5"/>
+      <text x="475" y="40" font-family="Arial" font-size="11" fill="#555">GitHub Pages</text>
+
+      <rect x="290" y="48" width="180" height="14" rx="2" fill="#eee"/>
+      <rect x="290" y="48" width="170" height="14" rx="2" fill="#2d9b5a"/>
+      <text x="475" y="60" font-family="Arial" font-size="11" fill="#555">Substack</text>
+
+      <rect x="290" y="68" width="180" height="14" rx="2" fill="#eee"/>
+      <rect x="290" y="68" width="175" height="14" rx="2" fill="#e53e3e"/>
+      <text x="475" y="80" font-family="Arial" font-size="11" fill="#555">Medium</text>
+
+      <text x="250" y="120" text-anchor="middle" font-family="Arial" font-size="11" fill="#777" font-style="italic">More control = more setup. Pick your trade-off.</text>
+    </svg>
+  </div>
+
+  <p>For this guide, I'm going to walk you through <strong>GitHub Pages</strong> — because it's the one that gives you the most control, costs absolutely nothing, and once it's set up, it's set up forever.</p>
+
+  <p>But if that sounds too techy, I'll also show you the 2-minute Substack option at the end.</p>
+
+  <div class="bold-point">"But I don't know how to code!"</div>
+
+  <p>You don't need to. I promise. You'll be copy-pasting a few things, but that's it. If you can write a WhatsApp message, you can do this.</p>
+
+  <hr class="divider">
+
+  <h2>Option 1: GitHub Pages (Free Forever, Your Own URL)</h2>
+
+  <p>GitHub Pages gives you a free website at <code>yourname.github.io</code>. No ads. No expiry. No credit card. It's used by millions of developers worldwide and it's not going anywhere.</p>
+
+  <p>Here's how to set it up in about 15 minutes:</p>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h3>Create a GitHub account</h3>
+      <p>Go to <a href="https://github.com">github.com</a> and sign up. It's free. Use any email you want.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h3>Create a special repository</h3>
+      <p>Once logged in, click the <strong>+</strong> button → <strong>New repository</strong>. Name it exactly: <code>yourusername.github.io</code> (replace "yourusername" with your actual GitHub username). Set it to Public. Click Create.</p>
+      <div class="wbw-box">
+        <div class="wbw-box-title">⚠️ Important</div>
+        The repository name MUST match your username exactly. If your username is <code>syedkhush</code>, the repo must be named <code>syedkhush.github.io</code>. Otherwise it won't work.
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h3>Create your first page</h3>
+      <p>In the repository, click <strong>Add file → Create new file</strong>. Name it <code>index.html</code>. Paste this starter code:</p>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My Blog&lt;/title&gt;
+  &lt;style&gt;
+    body { font-family: Georgia, serif; max-width: 680px;
+           margin: 60px auto; padding: 0 20px; font-size: 18px; }
+    h1 { font-size: 36px; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;p&gt;My blog is live!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      <p>Scroll down, click <strong>Commit changes</strong>.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <h3>Wait 2 minutes, then visit your site</h3>
+      <p>GitHub takes about 2 minutes to deploy. Then go to <code>https://yourusername.github.io</code> and your blog is live. On the internet. Forever. For free.</p>
+    </div>
+  </div>
+
+  <div class="illustration">
+    <svg width="320" height="120" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Stick figure jumping for joy -->
+      <circle cx="80" cy="30" r="16" fill="none" stroke="#000" stroke-width="2.5"/>
+      <line x1="80" y1="46" x2="80" y2="85" stroke="#000" stroke-width="2.5"/>
+      <!-- Arms up -->
+      <line x1="80" y1="60" x2="50" y2="40" stroke="#000" stroke-width="2.5"/>
+      <line x1="80" y1="60" x2="110" y2="40" stroke="#000" stroke-width="2.5"/>
+      <!-- Legs spread -->
+      <line x1="80" y1="85" x2="55" y2="110" stroke="#000" stroke-width="2.5"/>
+      <line x1="80" y1="85" x2="105" y2="110" stroke="#000" stroke-width="2.5"/>
+      <!-- Celebration text -->
+      <text x="140" y="40" font-family="Arial" font-size="18" font-weight="bold" fill="#000">IT'S LIVE!</text>
+      <text x="140" y="65" font-family="Georgia" font-size="14" fill="#555">yourusername.github.io</text>
+      <text x="140" y="90" font-family="Arial" font-size="12" fill="#888">✓ Free  ✓ Forever  ✓ No ads</text>
+    </svg>
+  </div>
+
+  <h2>How to write new blog posts</h2>
+
+  <p>Every new post is just a new HTML file. Create a file called <code>my-first-post.html</code>, write your post inside it, commit it, and it's live at <code>yourusername.github.io/my-first-post.html</code>.</p>
+
+  <p>Here's a simple template for each post:</p>
+
+  <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My Post Title — My Blog&lt;/title&gt;
+  &lt;style&gt;
+    body { font-family: Georgia, serif; max-width: 680px;
+           margin: 60px auto; padding: 0 20px; font-size: 18px;
+           line-height: 1.8; color: #1a1a1a; }
+    h1 { font-size: 32px; line-height: 1.2; }
+    .meta { color: #888; font-size: 14px; font-family: Arial; margin: 8px 0 30px; }
+    a { color: #1a5db5; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;&lt;a href="index.html"&gt;← Back to home&lt;/a&gt;&lt;/p&gt;
+  &lt;h1&gt;My Post Title&lt;/h1&gt;
+  &lt;p class="meta"&gt;May 23, 2026 · by Your Name&lt;/p&gt;
+
+  &lt;p&gt;Write your post here. Just keep adding paragraphs.&lt;/p&gt;
+
+  &lt;p&gt;Each paragraph is a &amp;lt;p&amp;gt; tag. That's literally all you need.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+  <div class="wbw-box green">
+    <div class="wbw-box-title">💡 Pro tip</div>
+    <p>You don't have to write HTML directly on GitHub. You can write your posts in any text editor (even Notepad), save as .html files, and drag-and-drop them into your GitHub repository. GitHub has a file upload button right in the browser.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h2>Option 2: Substack (2 minutes, zero setup)</h2>
+
+  <p>If GitHub feels like too much, Substack is the easiest blogging platform on the planet. You sign up, pick a name, and start writing. That's it.</p>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h3>Go to substack.com</h3>
+      <p>Click "Start writing". Enter your email. Done. You have a blog.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h3>Pick your publication name</h3>
+      <p>This becomes your URL: <code>yourname.substack.com</code>. Choose wisely — you can change it later but it's annoying.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h3>Write your first post</h3>
+      <p>Click New Post. Write. Click Publish. Your post is live. Substack also lets people subscribe via email, so you can build a newsletter at the same time.</p>
+    </div>
+  </div>
+
+  <div class="wbw-box red">
+    <div class="wbw-box-title">⚠️ The Substack Trade-off</div>
+    Substack is easy but you don't fully own your content. If Substack shuts down or changes its rules, you're at their mercy. GitHub Pages gives you full ownership. For most people starting out, Substack is fine. Just export your posts occasionally as a backup.
+  </div>
+
+  <hr class="divider">
+
+  <h2>What should you write about?</h2>
+
+  <p>This is the real question, isn't it.</p>
+
+  <p>Here's the honest answer: write about what you find yourself explaining to people over and over again. Write about what you wish someone had explained to you when you were figuring something out. Write about what makes you angry, what makes you laugh, what keeps you up at night.</p>
+
+  <p>The topic matters less than you think. The writing matters more.</p>
+
+  <div class="bold-point">Nobody starts with a big audience. Everyone starts with zero readers. The only way to get readers is to write things worth reading.</div>
+
+  <p>So start writing. Put it on the internet. Tell one friend. See what happens.</p>
+
+  <p>That's it. That's the whole thing.</p>
+
+  <div class="illustration">
+    <svg width="350" height="130" viewBox="0 0 350 130" xmlns="http://www.w3.org/2000/svg">
+      <!-- Stick figure at laptop -->
+      <circle cx="60" cy="35" r="16" fill="none" stroke="#000" stroke-width="2.5"/>
+      <line x1="60" y1="51" x2="60" y2="90" stroke="#000" stroke-width="2.5"/>
+      <line x1="60" y1="65" x2="40" y2="80" stroke="#000" stroke-width="2.5"/>
+      <line x1="60" y1="65" x2="80" y2="75" stroke="#000" stroke-width="2.5"/>
+      <line x1="60" y1="90" x2="45" y2="115" stroke="#000" stroke-width="2.5"/>
+      <line x1="60" y1="90" x2="75" y2="115" stroke="#000" stroke-width="2.5"/>
+      <!-- Laptop -->
+      <rect x="85" y="68" width="60" height="40" rx="2" fill="none" stroke="#000" stroke-width="2"/>
+      <line x1="80" y1="108" x2="150" y2="108" stroke="#000" stroke-width="2"/>
+      <!-- Lines of text on screen -->
+      <line x1="91" y1="78" x2="137" y2="78" stroke="#555" stroke-width="1.5"/>
+      <line x1="91" y1="86" x2="130" y2="86" stroke="#555" stroke-width="1.5"/>
+      <line x1="91" y1="94" x2="134" y2="94" stroke="#555" stroke-width="1.5"/>
+      <!-- Arrow to world -->
+      <line x1="155" y1="88" x2="195" y2="88" stroke="#000" stroke-width="2" stroke-dasharray="4,3"/>
+      <polygon points="195,88 185,83 185,93" fill="#000"/>
+      <!-- Globe simple -->
+      <circle cx="220" cy="88" r="28" fill="none" stroke="#000" stroke-width="2"/>
+      <ellipse cx="220" cy="88" rx="14" ry="28" fill="none" stroke="#000" stroke-width="1.5"/>
+      <line x1="192" y1="88" x2="248" y2="88" stroke="#000" stroke-width="1.5"/>
+      <line x1="194" y1="74" x2="246" y2="74" stroke="#000" stroke-width="1"/>
+      <line x1="194" y1="102" x2="246" y2="102" stroke="#000" stroke-width="1"/>
+      <text x="220" y="128" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">the internet</text>
+    </svg>
+    <p class="caption">You → Laptop → Internet. The whole pipeline.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h2>Quick recap</h2>
+
+  <div class="wbw-box">
+    <div class="wbw-box-title">📋 Summary</div>
+    <ul>
+      <li><strong>GitHub Pages</strong> — Most control, free forever, URL: <code>yourname.github.io</code>. Takes 15 min to set up.</li>
+      <li><strong>Substack</strong> — Easiest setup, built-in newsletter, URL: <code>yourname.substack.com</code>. Takes 2 min.</li>
+      <li><strong>Medium</strong> — Huge audience, zero setup, but you don't own it.</li>
+      <li>Write about what you know. Start before you're ready. Publish anyway.</li>
+    </ul>
+  </div>
+
+  <p>Good luck. The internet is waiting.</p>
+
+  <div class="share-box">
+    <p>If this post helped you, share it with someone who's been meaning to start a blog.</p>
+    <a href="mailto:?subject=How to make a free blog&body=https://syedkhush.github.io/how-to-make-a-free-blog.html" class="share-btn">Share via Email</a>
+    <a href="https://twitter.com/intent/tweet?text=How+to+make+your+own+blog+for+free&url=https://syedkhush.github.io/how-to-make-a-free-blog.html" class="share-btn">Share on X</a>
+  </div>
+
+  <p style="font-family: Arial; font-size: 14px; color: #888; text-align: center;">
+    <a href="index.html">← Back to SyedKhush</a>
+  </p>
+
+</article>
+
+<footer>
+  <span class="footer-brand">SyedKhush</span>
+  An independent publication by syed sami · <a href="mailto:sydkhush@proton.me">sydkhush@proton.me</a>
+</footer>
+
+</body>
+</html>
