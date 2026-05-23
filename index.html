@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyedKhush — by syed sami</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--ink:#1a1a18;--paper:#f5f0e8;--accent:#c8492a;--muted:#8a8578;--rule:#d4cfc4}
+    body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7}
+    header{border-bottom:1px solid var(--rule);padding:0 2rem}
+    .top{display:flex;justify-content:space-between;padding:1rem 0;border-bottom:1px solid var(--rule);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+    .masthead{text-align:center;padding:2.5rem 0 2rem}
+    .masthead h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,8vw,6rem);font-weight:700}
+    .tagline{font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-top:.75rem}
+    nav{display:flex;justify-content:center;gap:2.5rem;padding:1rem 0;border-top:1px solid var(--rule)}
+    nav a{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+    nav a:hover{color:var(--accent)}
+    main{max-width:900px;margin:0 auto;padding:3rem 2rem}
+    .label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:.75rem;margin-bottom:2rem}
+    .featured{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--rule)}
+    .feat-img{background:var(--ink);aspect-ratio:4/3;overflow:hidden}
+    .feat-img img{width:100%;height:100%;object-fit:cover;opacity:.85}
+    .feat-content{display:flex;flex-direction:column;justify-content:center}
+    .tag{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+    .feat-content h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.2;margin-bottom:1rem}
+    .feat-content h2 a{color:var(--ink);text-decoration:none}
+    .feat-content h2 a:hover{color:var(--accent)}
+    .excerpt{color:var(--muted);font-size:.95rem;margin-bottom:1.5rem}
+    .meta{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-bottom:3rem}
+    .card{border-top:2px solid var(--ink);padding-top:1.25rem}
+    .card h3{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:.6rem}
+    .card h3 a{color:var(--ink);text-decoration:none}
+    .card h3 a:hover{color:var(--accent)}
+    .card .excerpt{font-size:.875rem;margin-bottom:1rem}
+    .more{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);text-decoration:none}
+    .strip{background:var(--ink);color:var(--paper);padding:2.5rem;margin-bottom:3rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+    .strip h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:.5rem}
+    .strip p{font-size:.9rem;opacity:.75}
+    .btn{display:inline-block;border:1px solid var(--paper);color:var(--paper);padding:.7rem 1.5rem;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+    .btn:hover{background:var(--paper);color:var(--ink)}
+    footer{border-top:1px solid var(--rule);padding:2rem}
+    .foot{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+    .fbrand{font-family:'Playfair Display',serif;font-size:1.1rem}
+    .fcopy{font-size:.75rem;color:var(--muted)}
+    @media(max-width:640px){.featured,.grid,.strip{grid-template-columns:1fr}.top,.foot{flex-direction:column;gap:.5rem;text-align:center}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="top"><span>Est. May 2026</span><span>Independent Publication</span></div>
+  <div class="masthead"><h1>SyedKhush</h1><p class="tagline">A publication by syed sami</p></div>
+  <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="coming-soon.html">Latest</a></nav>
+</header>
+<main>
+  <div class="label">Featured</div>
+  <div class="featured">
+    <div class="feat-img"><img src="https://static.ghost.org/v4.0.0/images/feature-image.jpg" alt="Coming soon"></div>
+    <div class="feat-content">
+      <div class="tag">News</div>
+      <h2><a href="coming-soon.html">Coming soon</a></h2>
+      <p class="excerpt">This is SyedKhush, a brand new site by syed sami that's just getting started. Things will be up and running here shortly.</p>
+      <div class="meta">syed sami · May 21, 2026</div>
+    </div>
+  </div>
+  <div class="label">More Stories</div>
+  <div class="grid">
+    <div class="card">
+      <div class="tag">About</div>
+      <h3><a href="about.html">About this site</a></h3>
+      <p class="excerpt">SyedKhush is an independent publication launched in May 2026. Subscribe to get full access.</p>
+      <div class="meta" style="margin-bottom:.75rem">May 21, 2026</div>
+      <a href="about.html" class="more">Read more →</a>
+    </div>
+    <div class="card">
+      <div class="tag">Coming Soon</div>
+      <h3><a href="coming-soon.html">More content on the way</a></h3>
+      <p class="excerpt">New stories and articles are being prepared. Subscribe to be the first to know.</p>
+      <div class="meta" style="margin-bottom:.75rem">May 2026</div>
+      <a href="coming-soon.html" class="more">Read more →</a>
+    </div>
+  </div>
+  <div class="strip">
+    <div><h2>Stay in the loop</h2><p>Subscribe to get new posts delivered straight to your inbox.</p></div>
+    <a href="mailto:sydkhush@proton.me" class="btn">Get in touch</a>
+  </div>
+</main>
+<footer><div class="foot"><div class="fbrand">SyedKhush</div><div class="fcopy">© 2026 syed sami</div></div></footer>
+</body>
+</html>
