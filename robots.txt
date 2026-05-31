@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://syedkhush.github.io/sitemap.xml
