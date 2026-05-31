@@ -346,6 +346,100 @@
       color: var(--muted);
     }
 
+    /* ── MENU OVERLAY ── */
+    .menu-btn {
+      position: fixed;
+      top: 1.2rem;
+      right: 1.4rem;
+      z-index: 1000;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 5px;
+      padding: 10px 12px;
+      width: 48px;
+      height: 48px;
+    }
+
+    .menu-btn span {
+      display: block;
+      height: 2px;
+      background: var(--paper);
+      transition: all .3s ease;
+      border-radius: 1px;
+    }
+
+    .menu-btn span:nth-child(1) { width: 24px; }
+    .menu-btn span:nth-child(2) { width: 18px; }
+    .menu-btn span:nth-child(3) { width: 24px; }
+
+    .menu-btn.open span:nth-child(1) { width: 24px; transform: translateY(7px) rotate(45deg); }
+    .menu-btn.open span:nth-child(2) { opacity: 0; width: 0; }
+    .menu-btn.open span:nth-child(3) { width: 24px; transform: translateY(-7px) rotate(-45deg); }
+
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: #1a1a18;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .35s ease;
+    }
+
+    .menu-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .menu-overlay .menu-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.8rem;
+      color: var(--paper);
+      letter-spacing: .12em;
+      margin-bottom: 2.5rem;
+      opacity: .5;
+    }
+
+    .menu-overlay a {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 1.3rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--paper);
+      text-decoration: none;
+      padding: 1rem 3rem;
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      transition: background .2s, color .2s;
+    }
+
+    .menu-overlay a:first-of-type { border-top: 1px solid rgba(255,255,255,.08); }
+    .menu-overlay a:hover { background: rgba(255,255,255,.07); color: #c8492a; }
+    .menu-overlay a.active { background: #c8492a; color: #fff; }
+
+    .menu-overlay .menu-footer {
+      margin-top: 2.5rem;
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.25);
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 700px) {
       .featured { grid-template-columns: 1fr; }
@@ -357,6 +451,41 @@
   </style>
 </head>
 <body>
+
+<!-- Menu overlay -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-brand">SyedKhush</div>
+  <a href="index.html" class="active">Home</a>
+  <a href="about.html">About</a>
+  <a href="coming-soon.html">Archive</a>
+  <a href="store.html">Store</a>
+  <a href="book-corner.html">Book Corner</a>
+  <a href="coming-soon.html">Discussion</a>
+  <a href="coming-soon.html">Buy Me a Coffee</a>
+  <div class="menu-footer">Est. May 2026 · Independent Publication</div>
+</div>
+
+<!-- Hamburger button -->
+<button class="menu-btn" id="menuBtn" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const overlay = document.getElementById('menuOverlay');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    overlay.classList.toggle('open');
+    document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+  });
+  overlay.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      btn.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
 
 <header>
   <div class="top-bar">
@@ -604,4 +733,3 @@
 
 </body>
 </html>
-  
