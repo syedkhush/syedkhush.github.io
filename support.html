@@ -304,7 +304,38 @@
       color: rgba(255,255,255,.25);
     }
 
-    @media (max-width: 700px) {
+    .pay-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .7rem;
+      margin-top: 1.5rem;
+    }
+
+    .pay-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .4rem;
+      padding: .65rem 1rem;
+      border-radius: 2px;
+      text-decoration: none;
+      font-size: .72rem;
+      letter-spacing: .1em;
+      font-weight: 400;
+      transition: opacity .2s, transform .1s;
+      color: white;
+    }
+    .pay-btn:hover { opacity: .88; transform: translateY(-1px); }
+    .pay-btn:active { transform: translateY(0); }
+
+    .phonepay  { background: #5f259f; }
+    .paytm     { background: #002970; }
+    .gpay      { background: #1a73e8; }
+    .upi-generic { background: #3a3a3a; }
+
+    @media (max-width: 480px) {
+      .pay-buttons { grid-template-columns: 1fr; }
+    }
       .top-bar, .foot { flex-direction: column; gap: .4rem; text-align: center; }
       .menu-btn { display: flex; }
       nav { display: none; }
@@ -375,18 +406,32 @@
   </p>
 
   <div class="upi-card">
-    <p class="upi-card-title">Pay via UPI</p>
+    <p class="upi-card-title">Scan &amp; Pay via UPI</p>
     <div id="qr-container"></div>
     <div class="upi-id" id="upiId" onclick="copyUPI()">syed1881@ptyes</div>
-    <br>
     <p class="copy-hint" id="copyHint">tap to copy UPI ID</p>
-    <a href="upi://pay?pa=syed1881@ptyes&pn=S%20SAMI&cu=INR" class="upi-btn">
-      Open UPI App
-    </a>
+
+    <div class="pay-buttons">
+      <a href="phonepe://pay?pa=syed1881@ptyes&pn=S%20SAMI&cu=INR" class="pay-btn phonepay">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path fill="white" d="M8 7h5a3 3 0 0 1 0 6h-2v4H8V7zm3 4h2a1 1 0 0 0 0-2h-2v2z"/></svg>
+        PhonePe
+      </a>
+      <a href="paytmmp://pay?pa=syed1881@ptyes&pn=S%20SAMI&cu=INR" class="pay-btn paytm">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect width="24" height="24" rx="4"/><path fill="white" d="M5 12a7 7 0 1 1 14 0A7 7 0 0 1 5 12zm7-4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+        Paytm
+      </a>
+      <a href="gpay://upi/pay?pa=syed1881@ptyes&pn=S%20SAMI&cu=INR" class="pay-btn gpay">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="white"/><text x="3" y="16" font-size="9" font-weight="bold" fill="#4285F4">G</text><text x="9" y="16" font-size="9" font-weight="bold" fill="#EA4335">P</text><text x="14" y="16" font-size="9" font-weight="bold" fill="#FBBC05">a</text><text x="18" y="16" font-size="9" font-weight="bold" fill="#34A853">y</text></svg>
+        Google Pay
+      </a>
+      <a href="upi://pay?pa=syed1881@ptyes&pn=S%20SAMI&cu=INR" class="pay-btn upi-generic">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L20 8v8l-8 4-8-4V8l8-3.82z"/></svg>
+        Any UPI App
+      </a>
+    </div>
   </div>
 
-  <hr class="divider">
-  <p class="note">Works with PhonePe, Google Pay, Paytm, BHIM, and all UPI apps.</p>
+
 </main>
 
 <footer class="foot">
