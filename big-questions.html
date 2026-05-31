@@ -91,6 +91,53 @@
     .fcopy{font-size:.75rem;color:var(--muted)}
 
     @media(max-width:640px){.duo-stat,.pairs-grid{grid-template-columns:1fr}.top,.foot{flex-direction:column;gap:.5rem;text-align:center}}
+  
+  /* ── SHARE BUTTONS ── */
+  .share-section {
+    margin: 3rem auto 2rem;
+    max-width: 680px;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #cec8bb;
+    border-bottom: 1px solid #cec8bb;
+  }
+  .share-label {
+    font-size: .68rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: #7a7568;
+    margin-bottom: 1.2rem;
+  }
+  .share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: .8rem;
+    flex-wrap: wrap;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .55rem 1.2rem;
+    border: 1px solid #cec8bb;
+    text-decoration: none;
+    font-size: .7rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #18180f;
+    background: #f7f3eb;
+    transition: all .2s;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+  }
+  .share-btn:hover { background: #18180f; color: #f7f3eb; border-color: #18180f; }
+  .share-btn.whatsapp:hover { background: #25D366; border-color: #25D366; color: white; }
+  .share-btn.twitter:hover  { background: #000; border-color: #000; color: white; }
+  .share-btn.reddit:hover   { background: #FF4500; border-color: #FF4500; color: white; }
+  .share-btn.linkedin:hover { background: #0077B5; border-color: #0077B5; color: white; }
+  .share-btn.copy:hover     { background: #8b3a1a; border-color: #8b3a1a; color: white; }
+  .share-btn.copy.copied    { background: #2d9b5a; border-color: #2d9b5a; color: white; }
+
   </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YB5ZFMBPB"></script>
