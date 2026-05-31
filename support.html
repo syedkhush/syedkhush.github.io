@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — SyedKhush</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:     #18180f;
+      --paper:   #f7f3eb;
+      --warm:    #ede8dc;
+      --accent:  #8b3a1a;
+      --muted:   #7a7568;
+      --rule:    #cec8bb;
+      --light:   #e8e2d6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* ── TOP BAR ── */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .55rem 2rem;
+      border-bottom: 1px solid var(--rule);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .top-bar a { color: var(--muted); text-decoration: none; }
+    .top-bar a:hover { color: var(--accent); }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .masthead h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(3.2rem, 8vw, 6.5rem);
+      margin: 0;
+      letter-spacing: .06em;
+      color: var(--ink);
+    }
+    .masthead-sub {
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: .3rem 0 1rem;
+    }
+    .ornament {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--rule);
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 1rem 0;
+    }
+    nav a {
+      font-size: .7rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform .25s ease;
+    }
+    nav a:hover::after { transform: scaleX(1); }
+    nav a:hover { color: var(--accent); }
+    nav a.active { color: var(--accent); }
+    nav a.active::after { transform: scaleX(1); }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+      text-align: center;
+    }
+
+    .page-label {
+      font-size: .66rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin: 0 0 1rem;
+      letter-spacing: .04em;
+    }
+
+    .page-intro {
+      color: var(--muted);
+      font-size: .95rem;
+      max-width: 480px;
+      margin: 0 auto 3rem;
+      line-height: 1.8;
+    }
+
+    /* ── UPI CARD ── */
+    .upi-card {
+      background: var(--warm);
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      padding: 2.5rem 2rem;
+      max-width: 380px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .upi-card-title {
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* QR Code rendered via JS */
+    #qr-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    #qr-container canvas, #qr-container img {
+      border: 8px solid white;
+      border-radius: 2px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    }
+
+    .upi-id {
+      font-size: .8rem;
+      letter-spacing: .1em;
+      color: var(--ink);
+      background: white;
+      border: 1px solid var(--rule);
+      padding: .5rem 1.2rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: border-color .2s;
+    }
+    .upi-id:hover { border-color: var(--accent); }
+
+    .copy-hint {
+      font-size: .7rem;
+      color: var(--muted);
+      letter-spacing: .1em;
+    }
+
+    .copy-hint.copied { color: var(--accent); }
+
+    .upi-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: .75rem 2rem;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      transition: opacity .2s;
+    }
+    .upi-btn:hover { opacity: .85; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 3rem 0;
+    }
+
+    .note {
+      font-size: .82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ── FOOTER ── */
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      border-top: 1px solid var(--rule);
+      font-size: .64rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── MENU OVERLAY ── */
+    .menu-btn {
+      display: none;
+      position: fixed;
+      top: 1.2rem;
+      right: 1.4rem;
+      z-index: 1000;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 5px;
+      padding: 10px 12px;
+      width: 48px;
+      height: 48px;
+    }
+    .menu-btn span {
+      display: block;
+      height: 2px;
+      background: var(--paper);
+      transition: all .3s ease;
+      border-radius: 1px;
+    }
+    .menu-btn span:nth-child(1) { width: 24px; }
+    .menu-btn span:nth-child(2) { width: 18px; }
+    .menu-btn span:nth-child(3) { width: 24px; }
+    .menu-btn.open span:nth-child(1) { width: 24px; transform: translateY(7px) rotate(45deg); }
+    .menu-btn.open span:nth-child(2) { opacity: 0; width: 0; }
+    .menu-btn.open span:nth-child(3) { width: 24px; transform: translateY(-7px) rotate(-45deg); }
+
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: #1a1a18;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .35s ease;
+    }
+    .menu-overlay.open { opacity: 1; pointer-events: all; }
+    .menu-overlay .menu-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.8rem;
+      color: var(--paper);
+      letter-spacing: .12em;
+      margin-bottom: 2rem;
+    }
+    .menu-overlay a {
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #c8c4bc;
+      text-decoration: none;
+      padding: 1.1rem 3rem;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      transition: background .2s, color .2s;
+    }
+    .menu-overlay a:first-of-type { border-top: 1px solid rgba(255,255,255,.08); }
+    .menu-overlay a:hover { background: rgba(255,255,255,.07); color: #c8492a; }
+    .menu-overlay a.active { background: #c8492a; color: #fff; }
+    .menu-overlay .menu-footer {
+      margin-top: 2.5rem;
+      font-size: .6rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.25);
+    }
+
+    @media (max-width: 700px) {
+      .top-bar, .foot { flex-direction: column; gap: .4rem; text-align: center; }
+      .menu-btn { display: flex; }
+      nav { display: none; }
+      main { padding: 3rem 1.5rem 5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Menu overlay -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-brand">SyedKhush</div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="coming-soon.html">Archive</a>
+  <a href="store.html">Store</a>
+  <a href="book-corner.html">Book Corner</a>
+  <a href="coming-soon.html">Discussion</a>
+  <a href="support.html" class="active">Support</a>
+  <div class="menu-footer">Est. May 2026 · Independent Publication</div>
+</div>
+
+<button class="menu-btn" id="menuBtn" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const overlay = document.getElementById('menuOverlay');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    overlay.classList.toggle('open');
+    document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+  });
+  overlay.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      btn.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+
+<header>
+  <div class="top-bar">
+    <span>Est. May 2026</span>
+    <span>Independent Publication</span>
+    <a href="mailto:sydkhush@proton.me">sydkhush@proton.me</a>
+  </div>
+  <div class="masthead">
+    <h1>SyedKhush</h1>
+    <p class="masthead-sub">A publication by Syed Sami</p>
+    <span class="ornament">· · ·</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="support.html" class="active">Support</a>
+  </nav>
+</header>
+
+<main>
+  <p class="page-label">Support the work</p>
+  <h2 class="page-title">Buy Me a Coffee</h2>
+  <p class="page-intro">
+    If something I wrote made you think, smile, or see the world a little differently —
+    consider buying me a coffee. Every contribution keeps this publication independent.
+  </p>
+
+  <div class="upi-card">
+    <p class="upi-card-title">Pay via UPI</p>
+    <div id="qr-container"></div>
+    <div class="upi-id" id="upiId" onclick="copyUPI()">syed1881@ptyes</div>
+    <br>
+    <p class="copy-hint" id="copyHint">tap to copy UPI ID</p>
+    <a href="upi://pay?pa=syed1881@ptyes&pn=S%20SAMI&cu=INR" class="upi-btn">
+      Open UPI App
+    </a>
+  </div>
+
+  <hr class="divider">
+  <p class="note">Works with PhonePe, Google Pay, Paytm, BHIM, and all UPI apps.</p>
+</main>
+
+<footer class="foot">
+  <span>© 2026 SyedKhush</span>
+  <span>Est. May 2026 · Independent Publication</span>
+  <a href="mailto:sydkhush@proton.me" style="color:var(--muted);text-decoration:none;">sydkhush@proton.me</a>
+</footer>
+
+<!-- QR Code generator -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  // Generate UPI QR code
+  new QRCode(document.getElementById('qr-container'), {
+    text: 'upi://pay?pa=syed1881@ptyes&pn=S%20SAMI&cu=INR',
+    width: 200,
+    height: 200,
+    colorDark: '#18180f',
+    colorLight: '#ffffff',
+    correctLevel: QRCode.CorrectLevel.H
+  });
+
+  // Copy UPI ID
+  function copyUPI() {
+    navigator.clipboard.writeText('syed1881@ptyes').then(() => {
+      const hint = document.getElementById('copyHint');
+      hint.textContent = '✓ copied!';
+      hint.classList.add('copied');
+      setTimeout(() => {
+        hint.textContent = 'tap to copy UPI ID';
+        hint.classList.remove('copied');
+      }, 2000);
+    });
+  }
+</script>
+
+</body>
+</html>
