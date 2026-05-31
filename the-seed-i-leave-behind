@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Seed I Leave Behind — SyedKhush</title>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia:ital@0;1&family=Arial:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fff;
+      color: #1a1a1a;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    header {
+      border-bottom: 3px solid #000;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-name {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      text-decoration: none;
+      color: #000;
+      letter-spacing: -0.5px;
+    }
+
+    nav a {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #333;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    article {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .post-meta {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: Arial, sans-serif;
+      font-size: clamp(26px, 5vw, 36px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      color: #000;
+    }
+
+    .subtitle {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 30px 0;
+    }
+
+    p { margin-bottom: 22px; }
+
+    h2 {
+      font-family: Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 40px 0 16px;
+      color: #000;
+    }
+
+    .wbw-box {
+      border: 2px solid #000;
+      padding: 20px 24px;
+      margin: 30px 0;
+      background: #fffef5;
+    }
+
+    .wbw-box.green { background: #f0fff4; border-color: #2d9b5a; }
+    .wbw-box.red { background: #fff5f5; border-color: #e53e3e; }
+    .wbw-box.dark { background: #1a1a1a; border-color: #000; color: #fff; }
+    .wbw-box.dark .wbw-box-title { color: #ccc; }
+
+    .wbw-box-title {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .illustration {
+      text-align: center;
+      margin: 36px 0;
+    }
+
+    .illustration svg { max-width: 100%; }
+
+    .caption {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    .bold-point {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      margin: 40px 0;
+      padding: 0 20px;
+      line-height: 1.4;
+    }
+
+    a { color: #1a5db5; }
+    a:hover { text-decoration: underline; }
+
+    ul { padding-left: 28px; margin-bottom: 22px; }
+    li { margin-bottom: 8px; }
+
+    .share-box {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 24px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .share-box p {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .share-btn {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 24px;
+      text-decoration: none;
+      margin: 4px;
+    }
+
+    .share-btn:hover { background: #333; color: #fff; }
+
+    footer {
+      border-top: 3px solid #000;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      font-size: 18px;
+      color: #000;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 600px) { body { font-size: 16px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="site-name">SyedKhush</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<article>
+  <div class="post-meta">May 30, 2026 · by syed sami · 10 min read</div>
+  <h1>The Seed I Leave Behind</h1>
+  <p class="subtitle">On forgotten names, the debt of knowledge, and why I'm writing this at 29</p>
+  <hr class="divider">
+
+  <p>I am 29 years old. I am married. And I will die.</p>
+
+  <p>I don't mean that as drama. I mean it as the most honest sentence I can write. Because once you really sit with it — not as a distant idea but as a plain, boring fact — something shifts. You start asking: then what am I actually doing here?</p>
+
+  <p>This post is my attempt to answer that. It's messy. It's personal. I'd rather write something real than something polished and empty.</p>
+
+  <hr class="divider">
+
+  <h2>Your name will disappear. So will mine.</h2>
+
+  <p>Here's something nobody tells you at your wedding. When you get married and have children, those children will know your name. Their children will probably know it too. Maybe even their children's children.</p>
+
+  <p>Two, maybe three generations.</p>
+
+  <p>And then? Completely gone. Like you were never here.</p>
+
+  <!-- WBW-style: name fading across generations -->
+  <div class="illustration">
+    <svg width="620" height="260" viewBox="0 0 620 260" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- YOU box - hand drawn feel -->
+      <path d="M22,42 Q24,38 70,37 Q118,36 120,40 Q122,80 119,85 Q116,90 68,91 Q22,92 20,88 Q18,84 22,42Z" fill="#1a1a1a" stroke="#000" stroke-width="1.5"/>
+      <!-- stick figure inside box - YOU -->
+      <circle cx="70" cy="53" r="7" fill="none" stroke="#fff" stroke-width="1.5"/>
+      <line x1="70" y1="60" x2="70" y2="76" stroke="#fff" stroke-width="1.5"/>
+      <line x1="70" y1="65" x2="60" y2="72" stroke="#fff" stroke-width="1.5"/>
+      <line x1="70" y1="65" x2="80" y2="72" stroke="#fff" stroke-width="1.5"/>
+      <line x1="70" y1="76" x2="63" y2="87" stroke="#fff" stroke-width="1.5"/>
+      <line x1="70" y1="76" x2="77" y2="87" stroke="#fff" stroke-width="1.5"/>
+      <!-- eyes + smile on YOU figure -->
+      <circle cx="67" cy="51" r="1" fill="#fff"/>
+      <circle cx="73" cy="51" r="1" fill="#fff"/>
+      <path d="M67 55 Q70 57 73 55" fill="none" stroke="#fff" stroke-width="1"/>
+      <text x="70" y="105" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#000">YOU</text>
+      <text x="70" y="120" text-anchor="middle" font-family="Arial" font-size="10" fill="#888">today</text>
+
+      <!-- arrow 1 - wobbly -->
+      <path d="M125,64 Q148,58 162,64" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <polygon points="160,59 170,64 160,69" fill="#555"/>
+
+      <!-- CHILDREN box - slightly wobbly -->
+      <path d="M173,42 Q175,37 240,38 Q245,36 247,42 Q249,82 246,88 Q243,93 238,92 Q175,93 172,88 Q170,83 173,42Z" fill="#333" stroke="#000" stroke-width="1.5"/>
+      <!-- two stick figures - children -->
+      <circle cx="200" cy="54" r="6" fill="none" stroke="#fff" stroke-width="1.5"/>
+      <line x1="200" y1="60" x2="200" y2="74" stroke="#fff" stroke-width="1.5"/>
+      <line x1="200" y1="65" x2="193" y2="71" stroke="#fff" stroke-width="1.5"/>
+      <line x1="200" y1="65" x2="207" y2="71" stroke="#fff" stroke-width="1.5"/>
+      <line x1="200" y1="74" x2="195" y2="84" stroke="#fff" stroke-width="1.5"/>
+      <line x1="200" y1="74" x2="205" y2="84" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="220" cy="54" r="6" fill="none" stroke="#fff" stroke-width="1.5"/>
+      <line x1="220" y1="60" x2="220" y2="74" stroke="#fff" stroke-width="1.5"/>
+      <line x1="220" y1="65" x2="213" y2="71" stroke="#fff" stroke-width="1.5"/>
+      <line x1="220" y1="65" x2="227" y2="71" stroke="#fff" stroke-width="1.5"/>
+      <line x1="220" y1="74" x2="215" y2="84" stroke="#fff" stroke-width="1.5"/>
+      <line x1="220" y1="74" x2="225" y2="84" stroke="#fff" stroke-width="1.5"/>
+      <!-- kids know your name label -->
+      <text x="210" y="106" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#000">CHILDREN</text>
+      <text x="210" y="120" text-anchor="middle" font-family="Arial" font-size="10" fill="#888">know your name</text>
+
+      <!-- arrow 2 -->
+      <path d="M252,64 Q272,57 286,64" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <polygon points="284,59 294,64 284,69" fill="#888"/>
+
+      <!-- GRANDCHILDREN - faded -->
+      <path d="M298,42 Q300,37 375,38 Q380,37 382,43 Q383,84 380,89 Q377,94 370,93 Q300,93 297,88 Q295,83 298,42Z" fill="#888" stroke="#aaa" stroke-width="1.5"/>
+      <!-- three tiny grandkids, faded -->
+      <circle cx="318" cy="54" r="5" fill="none" stroke="#eee" stroke-width="1.2"/>
+      <line x1="318" y1="59" x2="318" y2="72" stroke="#eee" stroke-width="1.2"/>
+      <line x1="318" y1="63" x2="312" y2="69" stroke="#eee" stroke-width="1.2"/>
+      <line x1="318" y1="63" x2="324" y2="69" stroke="#eee" stroke-width="1.2"/>
+      <circle cx="340" cy="54" r="5" fill="none" stroke="#eee" stroke-width="1.2"/>
+      <line x1="340" y1="59" x2="340" y2="72" stroke="#eee" stroke-width="1.2"/>
+      <line x1="340" y1="63" x2="334" y2="69" stroke="#eee" stroke-width="1.2"/>
+      <line x1="340" y1="63" x2="346" y2="69" stroke="#eee" stroke-width="1.2"/>
+      <circle cx="362" cy="54" r="5" fill="none" stroke="#eee" stroke-width="1.2"/>
+      <line x1="362" y1="59" x2="362" y2="72" stroke="#eee" stroke-width="1.2"/>
+      <line x1="362" y1="63" x2="356" y2="69" stroke="#eee" stroke-width="1.2"/>
+      <line x1="362" y1="63" x2="368" y2="69" stroke="#eee" stroke-width="1.2"/>
+      <text x="340" y="106" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#555">GRAND-</text>
+      <text x="340" y="119" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#555">CHILDREN</text>
+      <text x="340" y="133" text-anchor="middle" font-family="Arial" font-size="10" fill="#aaa">...maybe remember</text>
+
+      <!-- arrow 3 - very faded -->
+      <path d="M386,64 Q406,60 420,64" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <polygon points="418,60 428,64 418,68" fill="#ccc"/>
+
+      <!-- AFTER - ghost/empty box -->
+      <path d="M432,42 Q434,37 590,38 Q594,36 596,43 Q597,84 594,89 Q590,94 585,93 Q433,93 430,88 Q428,83 432,42Z" fill="none" stroke="#ddd" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <!-- question mark ghost figures -->
+      <text x="470" y="78" font-family="Georgia" font-size="36" font-style="italic" fill="#ddd" text-anchor="middle">?</text>
+      <text x="515" y="78" font-family="Georgia" font-size="36" font-style="italic" fill="#ddd" text-anchor="middle">?</text>
+      <text x="560" y="78" font-family="Georgia" font-size="36" font-style="italic" fill="#ddd" text-anchor="middle">?</text>
+      <text x="513" y="110" text-anchor="middle" font-family="Arial" font-size="11" fill="#ccc">~70 years later</text>
+      <text x="513" y="126" text-anchor="middle" font-family="Arial" font-size="10" fill="#ccc">your name: gone</text>
+
+      <!-- handwritten-style label at bottom -->
+      <text x="310" y="165" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="13" fill="#888">↑ this is everyone. not just you.</text>
+
+      <!-- wavy underline for emphasis -->
+      <path d="M160,172 Q220,178 280,172 Q340,166 400,172 Q450,178 480,173" fill="none" stroke="#ddd" stroke-width="1"/>
+    </svg>
+    <p class="caption">Two, maybe three generations. Then your name vanishes. This isn't sad — it's just true.</p>
+  </div>
+
+  <p>I think about this constantly. Not with sadness — more with a strange kind of clarity. If your name will disappear anyway, and your wealth will be forgotten by the people who inherit it (because they won't know you built it), then what exactly are you running toward?</p>
+
+  <div class="wbw-box">
+    <div class="wbw-box-title">💭 The thing about wealth</div>
+    <p style="margin-bottom:0">If you build wealth — your children might not know what it cost you. If you didn't build it — they won't know that either. Either way, the story of <em>you</em> disappears. What remains, if anything does, is the shape you left on people's thinking. Ideas. Questions. The way you saw the world.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h2>I don't believe in the matrix. But I'm inside it.</h2>
+
+  <p>Here's my honest position: I don't fully believe in this system. The one that says you must move to earn, earn to eat, eat to survive, survive to move again. I can see the loop from inside the loop.</p>
+
+  <!-- WBW-style loop diagram - crude hand-drawn feel -->
+  <div class="illustration">
+    <svg width="500" height="220" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+      <text x="250" y="18" text-anchor="middle" font-family="Arial" font-weight="700" font-size="13" fill="#000">The Loop</text>
+
+      <!-- circular arrows - wobbly -->
+      <!-- top: MOVE -->
+      <path d="M180,50 Q250,30 320,50" fill="none" stroke="#333" stroke-width="2.5"/>
+      <polygon points="316,44 326,52 314,56" fill="#333"/>
+      <rect x="215" y="28" width="70" height="26" rx="3" fill="#fff" stroke="#333" stroke-width="1.5"/>
+      <text x="250" y="46" text-anchor="middle" font-family="Arial" font-weight="700" font-size="13" fill="#000">MOVE</text>
+
+      <!-- right: EARN -->
+      <path d="M340,70 Q380,110 355,160" fill="none" stroke="#333" stroke-width="2.5"/>
+      <polygon points="348,157 358,167 364,156" fill="#333"/>
+      <rect x="360" y="100" width="65" height="26" rx="3" fill="#fff" stroke="#333" stroke-width="1.5"/>
+      <text x="392" y="118" text-anchor="middle" font-family="Arial" font-weight="700" font-size="13" fill="#000">EARN</text>
+
+      <!-- bottom: EAT -->
+      <path d="M330,178 Q250,200 170,178" fill="none" stroke="#333" stroke-width="2.5"/>
+      <polygon points="174,172 164,180 176,186" fill="#333"/>
+      <rect x="214" y="178" width="72" height="26" rx="3" fill="#fff" stroke="#333" stroke-width="1.5"/>
+      <text x="250" y="196" text-anchor="middle" font-family="Arial" font-weight="700" font-size="13" fill="#000">EAT / LIVE</text>
+
+      <!-- left: SURVIVE -->
+      <path d="M148,160 Q118,110 148,70" fill="none" stroke="#333" stroke-width="2.5"/>
+      <polygon points="142,74 152,64 156,76" fill="#333"/>
+      <rect x="60" y="100" width="80" height="26" rx="3" fill="#fff" stroke="#333" stroke-width="1.5"/>
+      <text x="100" y="118" text-anchor="middle" font-family="Arial" font-weight="700" font-size="13" fill="#000">SURVIVE</text>
+
+      <!-- stick figure in center looking trapped -->
+      <circle cx="250" cy="110" r="14" fill="none" stroke="#c00" stroke-width="2"/>
+      <!-- worried face -->
+      <circle cx="245" cy="107" r="2" fill="#c00"/>
+      <circle cx="255" cy="107" r="2" fill="#c00"/>
+      <path d="M245 115 Q250 112 255 115" fill="none" stroke="#c00" stroke-width="1.5"/>
+      <!-- sweat drop -->
+      <ellipse cx="262" cy="103" rx="2" ry="3" fill="#88ccff" opacity="0.8"/>
+      <line x1="250" y1="124" x2="250" y2="138" stroke="#c00" stroke-width="2"/>
+      <line x1="250" y1="129" x2="240" y2="135" stroke="#c00" stroke-width="2"/>
+      <line x1="250" y1="129" x2="260" y2="135" stroke="#c00" stroke-width="2"/>
+      <line x1="250" y1="138" x2="243" y2="150" stroke="#c00" stroke-width="2"/>
+      <line x1="250" y1="138" x2="257" y2="150" stroke="#c00" stroke-width="2"/>
+
+      <!-- handwritten label -->
+      <text x="250" y="166" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="11" fill="#888">← me</text>
+    </svg>
+    <p class="caption">I can see the loop. I'm still in it. That's the trap.</p>
+  </div>
+
+  <p>If I had a piece of land on my name — just land — I genuinely believe I could build something outside this loop. Self-sufficient farming. Solar power. Ecological growing. Vertical gardens. I've thought about this seriously, not as fantasy. The technology exists. The knowledge exists.</p>
+
+  <p>The problem? Even escaping the system costs money. Which means I'm still inside it while trying to get out of it.</p>
+
+  <div class="bold-point">"To escape the matrix, you need the matrix's currency. That's the trap."</div>
+
+  <p>So I move. I earn. I participate. Not because I think this is the best way to live, but because right now it's the only path toward eventually building something different. I hold that tension consciously.</p>
+
+  <hr class="divider">
+
+  <h2>I might not be here tomorrow. Literally.</h2>
+
+  <p>This is the part people usually skip past in their heads. I want to say it plainly, because I think about it plainly.</p>
+
+  <p>I am 29. Writing this right now. And I genuinely don't know if I'll be alive next week — not because I'm unwell, but because death doesn't ask your age or check your calendar.</p>
+
+  <!-- WBW-style death paths diagram - crude + expressive -->
+  <div class="illustration">
+    <svg width="560" height="280" viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- central stick figure - ME, alive, happy -->
+      <circle cx="280" cy="90" r="20" fill="none" stroke="#000" stroke-width="2.5"/>
+      <!-- happy face -->
+      <circle cx="274" cy="86" r="2.5" fill="#000"/>
+      <circle cx="286" cy="86" r="2.5" fill="#000"/>
+      <path d="M274 94 Q280 99 286 94" fill="none" stroke="#000" stroke-width="2"/>
+      <line x1="280" y1="110" x2="280" y2="140" stroke="#000" stroke-width="2.5"/>
+      <line x1="280" y1="120" x2="260" y2="133" stroke="#000" stroke-width="2.5"/>
+      <line x1="280" y1="120" x2="300" y2="133" stroke="#000" stroke-width="2.5"/>
+      <line x1="280" y1="140" x2="267" y2="158" stroke="#000" stroke-width="2.5"/>
+      <line x1="280" y1="140" x2="293" y2="158" stroke="#000" stroke-width="2.5"/>
+      <!-- label -->
+      <text x="280" y="172" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="12" fill="#000">me, right now</text>
+
+      <!-- PATH 1: old age - top left -->
+      <path d="M265,75 Q200,40 130,55" fill="none" stroke="#888" stroke-width="1.8" stroke-dasharray="6,4"/>
+      <!-- old stick figure - hunched -->
+      <circle cx="108" cy="45" r="12" fill="none" stroke="#888" stroke-width="1.8"/>
+      <path d="M108 57 Q100 70 95 85" fill="none" stroke="#888" stroke-width="1.8"/> <!-- hunched body -->
+      <line x1="108" y1="65" x2="95" y2="72" stroke="#888" stroke-width="1.8"/>
+      <line x1="108" y1="65" x2="112" y2="73" stroke="#888" stroke-width="1.8"/>
+      <line x1="95" y1="85" x2="88" y2="98" stroke="#888" stroke-width="1.8"/>
+      <line x1="95" y1="85" x2="100" y2="99" stroke="#888" stroke-width="1.8"/>
+      <!-- walking stick -->
+      <line x1="112" y1="73" x2="118" y2="100" stroke="#888" stroke-width="1.8"/>
+      <text x="88" y="113" text-anchor="middle" font-family="Arial" font-size="11" fill="#888">natural aging</text>
+      <text x="88" y="126" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="10" fill="#aaa">(if lucky)</text>
+
+      <!-- PATH 2: disease - top right -->
+      <path d="M295,75 Q355,35 420,50" fill="none" stroke="#f6a623" stroke-width="1.8" stroke-dasharray="6,4"/>
+      <!-- sick stick figure -->
+      <circle cx="442" cy="42" r="12" fill="none" stroke="#f6a623" stroke-width="1.8"/>
+      <!-- X eyes for sick -->
+      <line x1="437" y1="37" x2="441" y2="41" stroke="#f6a623" stroke-width="1.5"/>
+      <line x1="441" y1="37" x2="437" y2="41" stroke="#f6a623" stroke-width="1.5"/>
+      <line x1="443" y1="37" x2="447" y2="41" stroke="#f6a623" stroke-width="1.5"/>
+      <line x1="447" y1="37" x2="443" y2="41" stroke="#f6a623" stroke-width="1.5"/>
+      <path d="M437 48 Q442 45 447 48" fill="none" stroke="#f6a623" stroke-width="1.5"/>
+      <line x1="442" y1="54" x2="442" y2="68" stroke="#f6a623" stroke-width="1.8"/>
+      <line x1="442" y1="59" x2="432" y2="65" stroke="#f6a623" stroke-width="1.8"/>
+      <line x1="442" y1="59" x2="452" y2="65" stroke="#f6a623" stroke-width="1.8"/>
+      <line x1="442" y1="68" x2="435" y2="80" stroke="#f6a623" stroke-width="1.8"/>
+      <line x1="442" y1="68" x2="449" y2="80" stroke="#f6a623" stroke-width="1.8"/>
+      <!-- squiggly sick lines -->
+      <path d="M455 50 Q460 45 465 50 Q470 55 475 50" fill="none" stroke="#f6a623" stroke-width="1.2" opacity="0.6"/>
+      <text x="453" y="95" text-anchor="middle" font-family="Arial" font-size="11" fill="#f6a623">disease</text>
+      <text x="453" y="108" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="10" fill="#f6a623" opacity="0.7">(uncurable, random)</text>
+
+      <!-- PATH 3: road - bottom left -->
+      <path d="M262,155 Q200,185 138,190" fill="none" stroke="#e53e3e" stroke-width="2" stroke-dasharray="6,4"/>
+      <!-- car hitting stick figure -->
+      <rect x="50" y="185" width="55" height="30" rx="4" fill="#e53e3e"/>
+      <rect x="60" y="173" width="35" height="18" rx="2" fill="#c00"/>
+      <circle cx="62" cy="218" r="8" fill="#222"/>
+      <circle cx="94" cy="218" r="8" fill="#222"/>
+      <!-- headlights -->
+      <ellipse cx="106" cy="192" rx="4" ry="3" fill="#fffde0"/>
+      <ellipse cx="106" cy="202" rx="4" ry="3" fill="#fffde0"/>
+      <!-- flying stick figure - hit -->
+      <circle cx="130" cy="183" r="9" fill="none" stroke="#e53e3e" stroke-width="2"/>
+      <!-- X eyes - dead -->
+      <line x1="126" y1="179" x2="129" y2="182" stroke="#e53e3e" stroke-width="1.5"/>
+      <line x1="129" y1="179" x2="126" y2="182" stroke="#e53e3e" stroke-width="1.5"/>
+      <line x1="131" y1="179" x2="134" y2="182" stroke="#e53e3e" stroke-width="1.5"/>
+      <line x1="134" y1="179" x2="131" y2="182" stroke="#e53e3e" stroke-width="1.5"/>
+      <line x1="130" y1="192" x2="128" y2="206" stroke="#e53e3e" stroke-width="2"/>
+      <line x1="130" y1="197" x2="118" y2="202" stroke="#e53e3e" stroke-width="2"/>
+      <line x1="130" y1="197" x2="140" y2="202" stroke="#e53e3e" stroke-width="2"/>
+      <line x1="128" y1="206" x2="121" y2="218" stroke="#e53e3e" stroke-width="2"/>
+      <line x1="128" y1="206" x2="135" y2="218" stroke="#e53e3e" stroke-width="2"/>
+      <!-- impact stars -->
+      <text x="112" y="178" font-family="Arial" font-size="14" fill="#e53e3e">💥</text>
+      <text x="80" y="240" text-anchor="middle" font-family="Arial" font-size="11" fill="#e53e3e">road accident</text>
+      <text x="80" y="253" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="10" fill="#e53e3e" opacity="0.7">(could be tomorrow)</text>
+
+      <!-- PATH 4: random - bottom right -->
+      <path d="M296,155 Q355,185 400,195" fill="none" stroke="#9b59b6" stroke-width="1.8" stroke-dasharray="6,4"/>
+      <!-- ghost/random event -->
+      <text x="430" y="200" font-family="Arial" font-size="40" fill="#9b59b6" opacity="0.4">👻</text>
+      <text x="440" y="232" text-anchor="middle" font-family="Arial" font-size="11" fill="#9b59b6">the unexpected</text>
+      <text x="440" y="245" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="10" fill="#9b59b6" opacity="0.6">(no warning)</text>
+
+      <!-- label at bottom -->
+      <text x="280" y="268" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="12" fill="#888">all roads lead here. the only variable is when.</text>
+    </svg>
+    <p class="caption">I could grow old. I could get sick. I could walk onto the wrong road tomorrow. All three are real.</p>
+  </div>
+
+  <p>I could grow old and die slowly — that's one path. I could get sick with something the doctors can't fix. Or I could walk outside tomorrow and simply not come back. I've written about entropy and roads before. I know these aren't fears — they're just arithmetic.</p>
+
+  <div class="wbw-box red">
+    <div class="wbw-box-title">⚡ The system's honest contract</div>
+    <p style="margin-bottom:0">To eat, you must earn. To earn, you must move. To move, you must risk. Roads. Rails. Air. Sea. The entire system runs on daily, accepted danger — and we've normalized it so completely we forget we're gambling every time we leave the house.</p>
+  </div>
+
+  <p>So yes — I might not be here next year. Or next week. I've made peace with this — not because I don't care about life, but because accepting it forces a better question:</p>
+
+  <div class="bold-point">If I could disappear any day — what am I actually doing <em>today</em> that matters?</div>
+
+  <hr class="divider">
+
+  <h2>Then what is worth leaving?</h2>
+
+  <p>Not your name. Not your money. Not your car or your house or the photos you posted.</p>
+
+  <p>I keep coming back to one word: <strong>seeds</strong>.</p>
+
+  <!-- WBW-style seed-to-tree illustration -->
+  <div class="illustration">
+    <svg width="580" height="230" viewBox="0 0 580 230" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- ground -->
+      <path d="M20,170 Q100,165 200,170 Q300,175 400,170 Q490,165 560,170" fill="none" stroke="#8B6914" stroke-width="2.5"/>
+      <path d="M20,170 Q290,180 560,170 L560,200 L20,200Z" fill="#f5e6c8" opacity="0.4"/>
+
+      <!-- SEED -->
+      <ellipse cx="65" cy="163" rx="13" ry="8" fill="#8B6914"/>
+      <ellipse cx="65" cy="161" rx="9" ry="5" fill="#a0774a" opacity="0.5"/>
+      <!-- label -->
+      <text x="65" y="190" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11" fill="#8B6914">seed</text>
+      <text x="65" y="204" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="10" fill="#aaa">(this post)</text>
+
+      <!-- wobbly arrow -->
+      <path d="M84,160 Q130,145 158,155" fill="none" stroke="#bbb" stroke-width="1.8" stroke-dasharray="5,3"/>
+      <polygon points="155,149 167,155 157,162" fill="#bbb"/>
+
+      <!-- SPROUT - tiny plant -->
+      <line x1="185" y1="170" x2="185" y2="135" stroke="#2d9b5a" stroke-width="2.5"/>
+      <!-- leaves -->
+      <path d="M185 150 Q168 138 160 144" fill="#90ee90" stroke="#2d9b5a" stroke-width="1.5"/>
+      <path d="M185 145 Q202 130 210 138" fill="#90ee90" stroke="#2d9b5a" stroke-width="1.5"/>
+      <!-- tiny stick reader -->
+      <circle cx="195" cy="127" r="6" fill="none" stroke="#2d9b5a" stroke-width="1.2"/>
+      <line x1="195" y1="133" x2="195" y2="145" stroke="#2d9b5a" stroke-width="1.2"/>
+      <line x1="195" y1="137" x2="189" y2="142" stroke="#2d9b5a" stroke-width="1.2"/>
+      <line x1="195" y1="137" x2="201" y2="142" stroke="#2d9b5a" stroke-width="1.2"/>
+      <text x="185" y="193" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11" fill="#2d9b5a">one reader</text>
+      <text x="185" y="206" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="10" fill="#aaa">thinks differently</text>
+
+      <!-- arrow 2 -->
+      <path d="M210,155 Q270,140 300,148" fill="none" stroke="#bbb" stroke-width="1.8" stroke-dasharray="5,3"/>
+      <polygon points="297,142 309,148 299,155" fill="#bbb"/>
+
+      <!-- TREE - bigger -->
+      <line x1="330" y1="170" x2="330" y2="90" stroke="#2d6b20" stroke-width="4"/>
+      <!-- branches -->
+      <line x1="330" y1="130" x2="305" y2="105" stroke="#2d6b20" stroke-width="2.5"/>
+      <line x1="330" y1="120" x2="358" y2="95" stroke="#2d6b20" stroke-width="2.5"/>
+      <line x1="330" y1="110" x2="312" y2="88" stroke="#2d6b20" stroke-width="2"/>
+      <!-- leaf cloud - hand drawn blob -->
+      <path d="M295,85 Q285,60 305,48 Q318,38 335,42 Q355,38 368,52 Q380,65 372,82 Q382,90 375,100 Q365,110 348,108 Q338,115 322,112 Q305,115 295,105 Q285,96 295,85Z" fill="#4a9b30" stroke="#2d9b5a" stroke-width="1.5"/>
+      <path d="M300,78 Q295,65 308,58 Q320,52 330,58 Q342,52 352,60 Q362,68 355,80" fill="#5cb840" stroke="none"/>
+      <!-- tiny people underneath getting shade -->
+      <circle cx="308" cy="158" r="5" fill="none" stroke="#555" stroke-width="1.2"/>
+      <line x1="308" y1="163" x2="308" y2="173" stroke="#555" stroke-width="1.2"/>
+      <circle cx="320" cy="156" r="5" fill="none" stroke="#555" stroke-width="1.2"/>
+      <line x1="320" y1="161" x2="320" y2="171" stroke="#555" stroke-width="1.2"/>
+      <circle cx="342" cy="158" r="5" fill="none" stroke="#555" stroke-width="1.2"/>
+      <line x1="342" y1="163" x2="342" y2="173" stroke="#555" stroke-width="1.2"/>
+      <circle cx="354" cy="156" r="5" fill="none" stroke="#555" stroke-width="1.2"/>
+      <line x1="354" y1="161" x2="354" y2="171" stroke="#555" stroke-width="1.2"/>
+      <!-- shade arc -->
+      <path d="M295,172 Q330,164 365,172" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="330" y="193" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11" fill="#2d9b5a">awareness grows</text>
+      <text x="330" y="206" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="10" fill="#aaa">outlives the planter</text>
+
+      <!-- arrow 3 - faint, hopeful -->
+      <path d="M370,140 Q420,120 460,128" fill="none" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <polygon points="457,122 468,128 459,135" fill="#bbb"/>
+
+      <!-- FOREST - silhouette in distance -->
+      <path d="M470,168 Q475,140 485,130 Q490,125 495,130 Q500,120 505,115 Q510,120 515,125 Q520,115 525,110 Q530,120 535,125 Q540,115 545,120 Q548,128 550,138 Q555,150 555,168Z" fill="#2d6b20" opacity="0.4"/>
+      <text x="513" y="193" text-anchor="middle" font-family="Arial" font-weight="700" font-size="11" fill="#2d6b20" opacity="0.6">generations</text>
+      <text x="513" y="206" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="10" fill="#aaa">later...</text>
+
+      <!-- caption-ish label -->
+      <text x="290" y="224" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="12" fill="#888">the tree doesn't need to remember who planted the seed</text>
+    </svg>
+    <p class="caption">A seed doesn't know who planted it. A tree doesn't remember the seed. The shade is real regardless.</p>
+  </div>
+
+  <p>For me, that seed is knowledge. More specifically: the act of sharing it honestly, without pretending to have all the answers.</p>
+
+  <p>I write these posts because somewhere out there — maybe in a city I'll never visit, maybe in a decade I'll never reach — someone might read something I wrote and think slightly differently about the world. About their life. About what actually matters. That's not fame. That's not legacy in the traditional sense. But it's real. It doesn't disappear when my name does.</p>
+
+  <hr class="divider">
+
+  <h2>Why I owe a debt to knowledge</h2>
+
+  <p>I didn't arrive at these thoughts alone. I read. I listened. I absorbed things from people who are now dead — people whose names I barely know, whose words I've internalized so completely I sometimes forget they weren't my own original thoughts.</p>
+
+  <p>That's how knowledge works. It passes through people. It doesn't belong to them. It moves from one mind to another, changing slightly each time, growing. The people who took the time to write it down, speak it clearly, make it accessible — they gave me something I can never fully repay.</p>
+
+  <!-- WBW-style knowledge chain -->
+  <div class="illustration">
+    <svg width="560" height="130" viewBox="0 0 560 130" xmlns="http://www.w3.org/2000/svg">
+      <text x="280" y="15" text-anchor="middle" font-family="Arial" font-weight="700" font-size="12" fill="#000">How knowledge actually travels</text>
+
+      <!-- dead thinker 1 -->
+      <circle cx="55" cy="45" r="13" fill="none" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="55" y="50" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="14" fill="#ccc">?</text>
+      <text x="55" y="70" text-anchor="middle" font-family="Arial" font-size="9" fill="#bbb">some thinker</text>
+      <text x="55" y="81" text-anchor="middle" font-family="Arial" font-size="9" fill="#bbb">long dead</text>
+
+      <!-- lightbulb float -->
+      <text x="42" y="30" font-size="16">💡</text>
+
+      <!-- arrow with "idea" label -->
+      <path d="M72,45 Q95,35 112,43" fill="none" stroke="#888" stroke-width="1.5"/>
+      <polygon points="110,38 120,43 112,50" fill="#888"/>
+      <text x="96" y="30" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="10" fill="#888">idea</text>
+
+      <!-- dead thinker 2 -->
+      <circle cx="138" cy="45" r="13" fill="none" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="138" y="50" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="14" fill="#ccc">?</text>
+      <text x="138" y="70" text-anchor="middle" font-family="Arial" font-size="9" fill="#bbb">another</text>
+      <text x="138" y="81" text-anchor="middle" font-family="Arial" font-size="9" fill="#bbb">also dead</text>
+
+      <!-- arrow -->
+      <path d="M155,45 Q178,35 195,43" fill="none" stroke="#888" stroke-width="1.5"/>
+      <polygon points="193,38 203,43 195,50" fill="#888"/>
+      <text x="179" y="30" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="10" fill="#888">mutates</text>
+
+      <!-- book/another person -->
+      <circle cx="220" cy="45" r="13" fill="none" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="220" y="50" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="14" fill="#ccc">?</text>
+      <text x="220" y="70" text-anchor="middle" font-family="Arial" font-size="9" fill="#bbb">...and another</text>
+      <text x="220" y="81" text-anchor="middle" font-family="Arial" font-size="9" fill="#bbb">still dead</text>
+
+      <!-- big arrow to me -->
+      <path d="M236,45 Q258,28 275,40" fill="none" stroke="#333" stroke-width="2"/>
+      <polygon points="273,34 285,40 275,48" fill="#333"/>
+      <text x="260" y="26" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="10" fill="#555">grows</text>
+
+      <!-- ME - alive, reading -->
+      <circle cx="305" cy="48" r="16" fill="none" stroke="#000" stroke-width="2"/>
+      <circle cx="299" cy="45" r="2" fill="#000"/>
+      <circle cx="311" cy="45" r="2" fill="#000"/>
+      <path d="M300 52 Q305 56 310 52" fill="none" stroke="#000" stroke-width="1.5"/>
+      <line x1="305" y1="64" x2="305" y2="80" stroke="#000" stroke-width="2"/>
+      <line x1="305" y1="70" x2="292" y2="78" stroke="#000" stroke-width="2"/>
+      <line x1="305" y1="70" x2="318" y2="78" stroke="#000" stroke-width="2"/>
+      <line x1="305" y1="80" x2="297" y2="92" stroke="#000" stroke-width="2"/>
+      <line x1="305" y1="80" x2="313" y2="92" stroke="#000" stroke-width="2"/>
+      <!-- book in hand -->
+      <rect x="316" y="74" width="14" height="10" rx="1" fill="#3a7bd5"/>
+      <text x="305" y="108" text-anchor="middle" font-family="Arial" font-size="9" fill="#000">me, 29,</text>
+      <text x="305" y="119" text-anchor="middle" font-family="Arial" font-size="9" fill="#000">still alive</text>
+
+      <!-- big arrow: now I pass it on -->
+      <path d="M324,48 Q355,30 375,40" fill="none" stroke="#2d9b5a" stroke-width="2.5"/>
+      <polygon points="372,33 385,40 374,48" fill="#2d9b5a"/>
+      <text x="355" y="25" text-anchor="middle" font-family="Arial" font-weight="700" font-size="10" fill="#2d9b5a">NOW I OWE</text>
+
+      <!-- FUTURE READER - faint, hopeful -->
+      <circle cx="412" cy="48" r="16" fill="none" stroke="#2d9b5a" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <circle cx="406" cy="44" r="2" fill="#2d9b5a" opacity="0.7"/>
+      <circle cx="418" cy="44" r="2" fill="#2d9b5a" opacity="0.7"/>
+      <path d="M407 52 Q412 57 417 52" fill="none" stroke="#2d9b5a" stroke-width="1.5" opacity="0.7"/>
+      <line x1="412" y1="64" x2="412" y2="80" stroke="#2d9b5a" stroke-width="1.5" opacity="0.7"/>
+      <line x1="412" y1="70" x2="399" y2="78" stroke="#2d9b5a" stroke-width="1.5" opacity="0.7"/>
+      <line x1="412" y1="70" x2="425" y2="78" stroke="#2d9b5a" stroke-width="1.5" opacity="0.7"/>
+      <text x="412" y="108" text-anchor="middle" font-family="Arial" font-size="9" fill="#2d9b5a">someone</text>
+      <text x="412" y="119" text-anchor="middle" font-family="Arial" font-size="9" fill="#2d9b5a">I'll never meet</text>
+
+      <!-- dots continuing -->
+      <circle cx="460" cy="48" r="4" fill="#2d9b5a" opacity="0.3"/>
+      <circle cx="480" cy="48" r="4" fill="#2d9b5a" opacity="0.2"/>
+      <circle cx="500" cy="48" r="4" fill="#2d9b5a" opacity="0.1"/>
+      <text x="480" y="80" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="11" fill="#aaa">and on...</text>
+    </svg>
+    <p class="caption">Knowledge passes through people. You don't own it. You only hold it for a moment — then pass it on.</p>
+  </div>
+
+  <p>So I owe a debt. Not to any individual. To the process itself. And the only way to repay a debt to knowledge is to keep it moving.</p>
+
+  <div class="wbw-box green">
+    <div class="wbw-box-title">🌱 What I actually want to leave behind</div>
+    <ul style="margin-bottom:0">
+      <li><strong>Honest questions.</strong> Not answers I invented — questions worth sitting with.</li>
+      <li><strong>Awareness of the loop.</strong> The system we're inside. The exits that exist. The cost of each choice.</li>
+      <li><strong>The idea that a different life is buildable.</strong> Self-sufficient land. Ecological farming. Solar. These aren't fantasies — they're engineering problems waiting for enough capital and will.</li>
+      <li><strong>Permission to see clearly.</strong> You are allowed to look at the matrix and say: I see you. I'm in you for now. But I'm not <em>of</em> you.</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <h2>The honest summary from age 29</h2>
+
+  <p>I am inside a system I don't fully believe in. My name will disappear within a few generations. I could die today or in fifty years. My wealth, if I build it, will be forgotten by the people who inherit it. The roads I travel are genuinely dangerous in ways I've written about elsewhere.</p>
+
+  <p>None of this is despair. This is just the clearest picture I can draw of reality from here.</p>
+
+  <p>And from this picture, only one thing makes consistent sense to me: plant seeds of awareness. Share what I'm figuring out. Write it down while I'm still here.</p>
+
+  <!-- Final WBW summary illustration -->
+  <div class="illustration">
+    <svg width="480" height="140" viewBox="0 0 480 140" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- name = paper -->
+      <rect x="20" y="30" width="120" height="55" rx="4" fill="#f0f0f0" stroke="#bbb" stroke-width="1.5"/>
+      <text x="80" y="52" text-anchor="middle" font-family="Arial" font-weight="700" font-size="13" fill="#888">NAME</text>
+      <text x="80" y="70" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="11" fill="#aaa">= paper</text>
+      <!-- flames underneath -->
+      <path d="M40,88 Q48,72 56,82 Q62,68 70,80 Q76,65 84,78 Q90,64 98,77 Q106,65 114,82 Q120,72 128,88Z" fill="#ff6b35" opacity="0.6"/>
+      <text x="80" y="122" text-anchor="middle" font-family="Arial" font-size="11" fill="#e53e3e">burns</text>
+
+      <!-- vs -->
+      <text x="185" y="65" text-anchor="middle" font-family="Arial" font-weight="700" font-size="22" fill="#ccc">vs</text>
+
+      <!-- idea = seed -->
+      <rect x="240" y="30" width="220" height="55" rx="4" fill="#f0fff4" stroke="#2d9b5a" stroke-width="2"/>
+      <text x="350" y="52" text-anchor="middle" font-family="Arial" font-weight="700" font-size="13" fill="#2d9b5a">IDEA / AWARENESS</text>
+      <text x="350" y="70" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="11" fill="#2d9b5a">= seed</text>
+      <!-- tiny sprout from box -->
+      <line x1="350" y1="85" x2="350" y2="102" stroke="#2d9b5a" stroke-width="2"/>
+      <path d="M350 95 Q336 86 330 91" fill="#90ee90" stroke="#2d9b5a" stroke-width="1.2"/>
+      <path d="M350 92 Q364 82 370 88" fill="#90ee90" stroke="#2d9b5a" stroke-width="1.2"/>
+      <text x="350" y="122" text-anchor="middle" font-family="Arial" font-size="11" fill="#2d9b5a">grows</text>
+    </svg>
+    <p class="caption">A name is paper. An idea is a seed. Paper burns. Seeds grow.</p>
+  </div>
+
+  <p>This is my debt being paid — one post at a time. Not because I'm wise. Not because I have it figured out. But because I am here right now, thinking these thoughts, and writing them down is the smallest, most honest thing I can do with the time I have.</p>
+
+  <p>If you're reading this after I'm gone — hello. I hope the seed found good soil.</p>
+
+  <div class="wbw-box dark">
+    <div class="wbw-box-title">The bottom line</div>
+    <p style="margin-bottom:0">Your name will disappear. Your wealth will be forgotten. You might not be here next week — life is genuinely that uncertain. The system keeps you moving through its risks whether you believe in it or not. None of this is a reason for despair. It is a reason to plant seeds. Knowledge. Questions. Awareness. These travel past your name and past your death and into minds you'll never meet.</p>
+  </div>
+
+  <p style="margin-top: 30px;">Write the thing. Say the thought. Ask the question out loud. You might not be here tomorrow to do it.</p>
+
+  <div class="share-box">
+    <p>If this made you think, share it with someone who needs to read it.</p>
+    <a href="mailto:?subject=The Seed I Leave Behind&body=https://syedkhush.github.io/the-seed-i-leave-behind.html" class="share-btn">Share via Email</a>
+    <a href="https://twitter.com/intent/tweet?text=The+Seed+I+Leave+Behind&url=https://syedkhush.github.io/the-seed-i-leave-behind.html" class="share-btn">Share on X</a>
+  </div>
+
+  <p style="font-family: Arial; font-size: 14px; color: #888; text-align: center;">
+    <a href="index.html">← Back to SyedKhush</a>
+  </p>
+
+</article>
+
+<footer>
+  <span class="footer-brand">SyedKhush</span>
+  An independent publication by syed sami · <a href="mailto:sydkhush@proton.me">sydkhush@proton.me</a>
+</footer>
+
+</body>
+</html>
