@@ -3,7 +3,7 @@
    (disqus.com > your site > Admin > Settings > General > Shortname).
    Until you do, the comments box stays hidden so nothing looks broken. */
 (function () {
-  var DISQUS_SHORTNAME = 'syedkhush';
+  var DISQUS_SHORTNAME = 'NEWNAME';
 
   var box = document.getElementById('comments');
   if (!box) return;
