@@ -289,6 +289,14 @@
       <button class="share-btn copy" onclick="navigator.clipboard.writeText('https://syedkhush.github.io/multiverse-clumsy-artist.html').then(()=>{this.textContent='Copied!';this.classList.add('copied');setTimeout(()=>{this.textContent='Copy Link';this.classList.remove('copied')},2000)})">Copy Link</button>
     </div>
   </div>
+
+  <section class="comments" id="comments" data-page="multiverse-clumsy-artist" aria-label="Comments">
+    <h2 class="comments-title">Join the discussion</h2>
+    <p class="comments-note">Disagree freely, but argue with the idea, not the person.</p>
+    <div id="disqus_thread"></div>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+  </section>
+  <script src="comments.js" defer></script>
 </main>
 
 <footer><div class="foot"><div class="fbrand">SyedKhush</div><div class="fcopy">© 2026 syed sami</div></div></footer>

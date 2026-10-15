@@ -166,3 +166,12 @@ footer { border-top: 1px solid var(--rule); }
   body { font-size: 15px; }
   .article-body { font-size: 1.05rem; }
 }
+
+/* ---------- Comments (Disqus) ---------- */
+.comments { margin-top: 3rem; padding-top: 1.5rem; border-top: 3px solid var(--ink); }
+.comments-title { font-size: 1.4rem; font-weight: 700; color: var(--accent); margin: 0 0 .4rem; }
+.comments-note { color: var(--muted); font-size: .95rem; margin: 0 0 1.5rem; }
+#disqus_thread { min-height: 120px; }
+
+/* Share buttons: match the new palette */
+.share-btn { background: var(--warm); border-color: var(--rule); border-radius: 3px; color: var(--ink); letter-spacing: 0; text-transform: none; font-size: .9rem; }
