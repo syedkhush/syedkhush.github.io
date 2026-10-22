@@ -175,3 +175,17 @@ footer { border-top: 1px solid var(--rule); }
 
 /* Share buttons: match the new palette */
 .share-btn { background: var(--warm); border-color: var(--rule); border-radius: 3px; color: var(--ink); letter-spacing: 0; text-transform: none; font-size: .9rem; }
+
+/* aligned post list */
+.post-row {
+  display: grid;
+  grid-template-columns: 1fr 5rem 9rem;
+  align-items: baseline;
+  gap: 1.4rem;
+}
+.post-tag { text-align: center; }
+.post-date { text-align: right; }
+
+@media (max-width: 700px) {
+  .post-row { grid-template-columns: 1fr; }
+}
