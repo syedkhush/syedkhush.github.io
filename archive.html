@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive — SyedKhush</title>
+  <meta name="description" content="Every essay and guide on SyedKhush, in one place.">
+  <link rel="canonical" href="https://syedkhush.github.io/archive.html">
+  <link rel="stylesheet" href="wbw-theme.css">
+  <link rel="stylesheet" href="wbw-essay.css">
+</head>
+<body>
+
+<header class="essay-head">
+  <a href="index.html" class="essay-logo">SyedKhush</a>
+  <p class="essay-sub">A publication by Syed Sami</p>
+  <nav class="essay-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="archive.html">Archive</a></nav>
+</header>
+
+<main class="archive">
+  <h1>Archive</h1>
+  <p class="lead">Everything I've written so far, newest first.</p>
+  <div class="filters" id="filters">
+    <button class="on" data-f="all">All</button>
+    <button data-f="Essay">Essays</button>
+    <button data-f="Guide">Guides</button>
+  </div>
+  <div id="list">
+    <a class="a-row" href="multiverse-clumsy-artist.html" data-type="Essay">
+      <img src="og-home.jpg" alt="" loading="lazy">
+      <span><span class="t">The Multiverse Theory Sounds Less Like Physics and More Like a Clumsy Artist With Trust Issues</span><span class="d">Modern physics loves the Multiverse to solve the Fine-Tuning Problem. But the theory answers precision with chaos.</span></span>
+      <span class="tag">Essay</span>
+      <span class="date">September 2026</span>
+    </a>
+    <a class="a-row" href="big-questions.html" data-type="Essay">
+      <img src="og-big-questions.jpg" alt="" loading="lazy">
+      <span><span class="t">The Questions I Can't Stop Asking</span><span class="d">On the Big Bang, consciousness, grief, God, pairs, blood, and why the universe won't explain itself.</span></span>
+      <span class="tag">Essay</span>
+      <span class="date">May 2026</span>
+    </a>
+    <a class="a-row" href="entropy-and-the-road.html" data-type="Essay">
+      <img src="og-entropy.jpg" alt="" loading="lazy">
+      <span><span class="t">The Road Doesn't Care About You</span><span class="d">On entropy, roads, and the uncomfortable math of simply going outside.</span></span>
+      <span class="tag">Essay</span>
+      <span class="date">May 23, 2026</span>
+    </a>
+    <a class="a-row" href="how-to-make-a-free-blog.html" data-type="Guide">
+      <img src="og-blog-guide.jpg" alt="" loading="lazy">
+      <span><span class="t">How to Make Your Own Blog for Absolutely Free</span><span class="d">A no-BS guide to getting your words on the internet without spending a single rupee.</span></span>
+      <span class="tag">Guide</span>
+      <span class="date">May 23, 2026</span>
+    </a>
+    <a class="a-row" href="the-seed-i-leave-behind.html" data-type="Essay">
+      <img src="og-seed.jpg" alt="" loading="lazy">
+      <span><span class="t">The Seed I Leave Behind</span><span class="d">On forgotten names, the debt of knowledge, and why I'm writing this at 29.</span></span>
+      <span class="tag">Essay</span>
+      <span class="date">May 30, 2026</span>
+    </a>
+  </div>
+</main>
+
+<script>
+  var btns = document.querySelectorAll('#filters button');
+  var rows = document.querySelectorAll('#list .a-row');
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      btns.forEach(function (x) { x.classList.remove('on'); });
+      b.classList.add('on');
+      rows.forEach(function (r) {
+        r.hidden = !(b.dataset.f === 'all' || r.dataset.type === b.dataset.f);
+      });
+    });
+  });
+</script>
+
+<footer>
+  <div class="foot">
+    <div class="fbrand">SyedKhush</div>
+    <div class="fcopy">© 2026 Syed Sami &nbsp;·&nbsp; Independent Publication</div>
+  </div>
+</footer>
+
+</body>
+</html>

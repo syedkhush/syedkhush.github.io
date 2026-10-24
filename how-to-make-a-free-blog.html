@@ -348,15 +348,14 @@
     gtag('config', 'G-XF5172FHQ7');
   </script>
   <link rel="stylesheet" href="wbw-theme.css">
+  <link rel="stylesheet" href="wbw-essay.css">
 </head>
 <body>
 
-<header>
-  <a href="index.html" class="site-name">SyedKhush</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-  </nav>
+<header class="essay-head">
+  <a href="index.html" class="essay-logo">SyedKhush</a>
+  <p class="essay-sub">A publication by Syed Sami</p>
+  <nav class="essay-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="archive.html">Archive</a></nav>
 </header>
 
 <article>
@@ -728,22 +727,23 @@ function copyLink(url, btn) {
   </section>
   <script src="comments.js" defer></script>
 </article>
+<div class="essay-extra">
+  <div class="signup">
+    <h3>Enjoyed this? Get the next one by email.</h3>
+    <p>No schedule. No noise. Just a quiet email when something new goes up.</p>
+    <form action="https://formspree.io/f/xgobapyk" method="POST">
+      <input type="email" name="email" placeholder="email address" required aria-label="Email address">
+      <button type="submit">SEND ME NEW POSTS</button>
+    </form>
+    <small>No spam. Unsubscribe any time.</small>
+  </div>
+  <div class="wbw-label"><span>Read Next</span></div>
+  <div class="next-cards">
+      <a class="next-card" href="the-seed-i-leave-behind.html"><img src="og-seed.jpg" alt="" loading="lazy"><b>The Seed I Leave Behind</b><em>May 30, 2026 · 10 min read</em></a>
+      <a class="next-card" href="multiverse-clumsy-artist.html"><img src="og-home.jpg" alt="" loading="lazy"><b>The Multiverse Theory Sounds Less Like Physics and More Like a Clumsy Artist With Trust Issues</b><em>September 2026 · 4 min read</em></a>
+  </div>
+</div>
 
-<!-- ── SUBSCRIBE ── -->
-<section style="background:#f9f6f0;border-top:1px solid #ddd8cc;border-bottom:1px solid #ddd8cc;padding:3rem 2rem;text-align:center;margin-top:3rem;">
-  <p style="font-family:sans-serif;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#888;margin-bottom:.8rem;">Enjoyed this essay?</p>
-  <h2 style="font-family:Georgia,serif;font-size:1.7rem;font-weight:400;color:#1a1a1a;margin-bottom:.6rem;">Get the next one in your inbox.</h2>
-  <p style="font-family:sans-serif;font-size:.9rem;color:#888;max-width:360px;margin:0 auto 1.5rem;">No schedule. No noise. Just a quiet email when something new goes up.</p>
-  <form action="https://formspree.io/f/xgobapyk" method="POST" style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;max-width:420px;margin:0 auto;">
-    <input type="email" name="email" placeholder="your@email.com" required
-      style="flex:1;min-width:200px;padding:.7rem 1rem;border:1px solid #ccc;background:#fff;font-family:sans-serif;font-size:.9rem;color:#1a1a1a;outline:none;border-radius:2px;">
-    <button type="submit"
-      style="padding:.7rem 1.6rem;background:#8b3a1a;color:#fff;border:none;font-family:sans-serif;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;">
-      Subscribe
-    </button>
-  </form>
-  <p style="font-family:sans-serif;font-size:.75rem;color:#aaa;margin-top:.8rem;">No spam. Unsubscribe any time.</p>
-</section>
 
 <footer>
   <span class="footer-brand">SyedKhush</span>
