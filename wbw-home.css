@@ -1,0 +1,124 @@
+/* ------------------------------------------------------------
+   Two-column homepage (hero + card grid + sidebar).
+   Loaded AFTER wbw-theme.css. Only affects index.html.
+------------------------------------------------------------ */
+
+main.home { max-width: 1100px; padding: 1.5rem 1.5rem 4rem; }
+
+.home-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* ---------- Section labels (blue tab + rule) ---------- */
+.wbw-label {
+  border-bottom: 1px solid var(--accent);
+  margin: 2.6rem 0 1.6rem;
+}
+.wbw-label span {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: .35rem .9rem;
+}
+.wbw-label.orange { border-bottom-color: #f5a03a; margin-top: 2rem; }
+.wbw-label.orange span { background: #f5a03a; }
+
+/* ---------- Hero ---------- */
+.hero-tag {
+  font-size: .75rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: .3rem;
+}
+.hero-title { font-size: clamp(1.6rem, 3.4vw, 2.2rem); line-height: 1.2; margin: 0 0 1rem; font-weight: 700; }
+.hero-title a { color: var(--accent); text-decoration: none; }
+.hero-title a:hover { color: var(--ink); }
+.hero-img { display: block; border: 1px solid var(--rule); }
+.hero-img svg { display: block; width: 100%; height: auto; }
+.hero-exc { margin: 1rem 0 .4rem; font-size: 1rem; color: var(--ink); }
+
+.more { font-weight: 700; text-decoration: none; white-space: nowrap; }
+.more:hover { color: var(--ink); }
+
+/* ---------- Card grid ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.2rem 1.75rem;
+}
+.card { border-bottom: 1px solid var(--rule); padding-bottom: 1.4rem; }
+.card-img {
+  display: block; border: 1px solid var(--rule);
+  aspect-ratio: 16 / 9; overflow: hidden; background: var(--warm);
+}
+.card-img svg, .card-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.card h3 { font-size: 1.2rem; line-height: 1.25; margin: .8rem 0 .5rem; font-weight: 700; }
+.card h3 a { color: var(--accent); text-decoration: none; }
+.card h3 a:hover { color: var(--ink); }
+.card-exc { font-size: .88rem; color: var(--ink); margin: 0 0 .5rem; }
+.card-meta { font-size: .75rem; color: var(--muted); }
+
+/* ---------- Sidebar ---------- */
+.side { display: flex; flex-direction: column; gap: 1.1rem; }
+
+.signup { background: #f5a03a; padding: 1.1rem 1rem 1rem; border-radius: 2px; }
+.signup h3 { margin: 0 0 .35rem; font-size: 1.05rem; font-weight: 700; color: #3a2400; }
+.signup p { margin: 0 0 .8rem; font-size: .82rem; color: #3a2400; }
+.signup input {
+  width: 100%; box-sizing: border-box; padding: .6rem .7rem; margin-bottom: .5rem;
+  border: 0; border-radius: 2px; font: inherit; font-size: .85rem;
+}
+.signup button {
+  width: 100%; padding: .65rem; border: 0; border-radius: 2px; cursor: pointer;
+  background: #1d5f94; color: #fff; font: inherit; font-size: .78rem; font-weight: 600; letter-spacing: .04em;
+}
+.signup button:hover { background: #154a74; }
+.signup small { display: block; margin-top: .6rem; font-size: .72rem; color: #5a3d10; }
+
+.promo { display: block; border-radius: 2px; overflow: hidden; border: 1px solid var(--rule); text-decoration: none; }
+.promo svg { display: block; width: 100%; height: auto; }
+.promo:hover { border-color: var(--accent); }
+
+.promo-store {
+  height: 96px; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #86c9a0 0%, #4d96c6 100%); border: 0;
+}
+.promo-store span {
+  font-family: var(--font-logo); font-size: 1.7rem; color: #fff; letter-spacing: .02em;
+  text-shadow: 2px 2px 0 rgba(0,0,0,.18);
+}
+.promo-store:hover { filter: brightness(1.06); }
+
+.random-btn {
+  display: block; text-align: center; text-decoration: none;
+  background: #14396b; color: #fff; border-radius: 22px; padding: .6rem 1rem;
+  font-family: var(--font-logo); font-size: 1.35rem; letter-spacing: .06em;
+}
+.random-btn:hover { background: var(--accent); color: #fff; }
+
+.start ul { list-style: none; margin: 0; padding: 0; }
+.start li { border-bottom: 1px solid var(--rule); }
+.mini { display: flex; gap: .7rem; align-items: center; padding: .65rem 0; text-decoration: none; }
+.mini img { width: 78px; height: 44px; object-fit: cover; border: 1px solid var(--rule); flex: none; }
+.mini b { display: block; font-size: .8rem; line-height: 1.25; color: var(--accent); }
+.mini em { display: block; font-style: normal; font-size: .72rem; color: var(--muted); margin-top: .15rem; }
+.mini:hover b { color: var(--ink); }
+
+.side-mail { margin: .4rem 0 0; font-size: .85rem; text-align: center; }
+.side-mail a { font-weight: 600; text-decoration: none; }
+
+/* ---------- Mobile / tablet ---------- */
+@media (max-width: 900px) {
+  .home-grid { grid-template-columns: minmax(0, 1fr); }
+  .side { margin-top: 1rem; }
+}
+@media (max-width: 600px) {
+  .cards { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* keep the full cover image visible (no side-cropping) */
+.card-img img { object-fit: contain; background: #111; }
+.mini img { object-fit: contain; background: #111; }
